@@ -1,3 +1,44 @@
+<?php
+// Establecer conexión
+$connection = mysqli_connect("localhost", "root", "", "Cripto");
+
+// Bitcoin
+$sqlBTC = "SELECT value FROM Bitcoin ORDER BY ID DESC LIMIT 3";
+$queryBTC = mysqli_query($connection, $sqlBTC);
+$rowcountBTC = mysqli_num_rows($queryBTC);
+
+if ($rowcountBTC > 0) {
+    $i = 1;
+    while ($rowBTC = mysqli_fetch_array($queryBTC)) {
+        ${'rowBTC' . $i} = $rowBTC['value'];
+        $i++;
+    }
+} else {
+    echo "No se han encontrado resultados para Bitcoin";
+}
+
+// Ethereum
+$sqlETH = "SELECT value FROM Etherium ORDER BY ID DESC LIMIT 3";
+$queryETH = mysqli_query($connection, $sqlETH);
+$rowcountETH = mysqli_num_rows($queryETH);
+
+if ($rowcountETH > 0) {
+    $i = 1;
+    while ($rowETH = mysqli_fetch_array($queryETH)) {
+        ${'rowETH' . $i} = $rowETH['value'];
+        $i++;
+    }
+} else {
+    echo "No se han encontrado resultados para Ethereum";
+}
+
+// Cerrar conexión
+mysqli_close($connection);
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -219,7 +260,8 @@
                           <span>Bitcoin <b>BTC</b></span>
                         </td>
 
-                        <td>USD 680,175.06</td>
+                        <td>USD <?php echo number_format($rowBTC1, 2, '.', ',');?></td>
+                        </td>
                         <td>
                           <span class="text-success">+1.13%</span>
                         </td>
@@ -231,7 +273,7 @@
                           <span>Ethereum <b>ETH</b></span>
                         </td>
 
-                        <td>USD 680,175.06</td>
+                        <td>USD <?php echo number_format($rowETH1, 2, '.', ',');?></td>
                         <td>
                           <span class="text-success">+1.13%</span>
                         </td>

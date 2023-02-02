@@ -4,18 +4,18 @@ CryptoBroker is a vulnerable website based on web technologies created by CyberW
 
 ## TODO
 
-- [ ] Finish database relations. ![80%](https://progress-bar.dev/70)
-- [ ] Add documentation. ![50%](https://progress-bar.dev/5)
+- [ ] Finish database relations. ![80%](https://progress-bar.dev/80)
+- [ ] Add documentation. ![50%](https://progress-bar.dev/50)
 - [ ] DataBase Logic. ![100%](https://progress-bar.dev/100)
 - [ ] Finish routes. ![50%](https://progress-bar.dev/50)
 - [ ] Start the Front-end. ![10%](https://progress-bar.dev/10)
-    - [ ] HomePage. ![100%](https://progress-bar.dev/0)
+    - [ ] HomePage. ![100%](https://progress-bar.dev/100)
 
-    - [ ] LoginPage. ![100%](https://progress-bar.dev/15)
-    - [ ] RegisterPage. ![100%](https://progress-bar.dev/15)
-    - [ ] DashBoardPage. ![10%](https://progress-bar.dev/0?title=beta)
-    - [ ] Buy Criptos Logic ![80%](https://progress-bar.dev/30)
-    - [ ] Sell Criptos Logic ![60%](https://progress-bar.dev/10)
+    - [ ] LoginPage. ![100%](https://progress-bar.dev/100)
+    - [ ] RegisterPage. ![100%](https://progress-bar.dev/100)
+    - [ ] DashBoardPage. ![10%](https://progress-bar.dev/10)
+    - [ ] Buy Criptos Logic ![80%](https://progress-bar.dev/80)
+    - [ ] Sell Criptos Logic ![60%](https://progress-bar.dev/60)
 
 ## Project dependencies
 
