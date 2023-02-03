@@ -22,7 +22,7 @@ if($rows > 0){
 }
 
 if($_SESSION['email'] == $email && $_SESSION['password'] == $password){
-    header("Location:../index.php");
+    header("Location:../User/dashboard.php");
     exit();
 }else{
     echo '

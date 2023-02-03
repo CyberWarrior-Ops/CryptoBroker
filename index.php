@@ -32,6 +32,36 @@ if ($rowcountETH > 0) {
     echo "No se han encontrado resultados para Ethereum";
 }
 
+// Litecoin
+$sqlLTC = "SELECT value FROM LiteCoin ORDER BY ID DESC LIMIT 3";
+$queryLTC = mysqli_query($connection, $sqlLTC);
+$rowcountLTC = mysqli_num_rows($queryLTC);
+
+if ($rowcountLTC > 0) {
+    $i = 1;
+    while ($rowLTC = mysqli_fetch_array($queryLTC)) {
+        ${'rowLTC' . $i} = $rowLTC['value'];
+        $i++;
+    }
+} else {
+    echo "No se han encontrado resultados para Litecoin";
+}
+
+// Bitcoin Cash
+$sqlBCH = "SELECT value FROM BTCC ORDER BY ID DESC LIMIT 3";
+$queryBCH = mysqli_query($connection, $sqlBCH);
+$rowcountBCH = mysqli_num_rows($queryBCH);
+
+if ($rowcountBCH > 0) {
+    $i = 1;
+    while ($rowBCH = mysqli_fetch_array($queryBCH)) {
+        ${'rowBCH' . $i} = $rowBCH['value'];
+        $i++;
+    }
+} else {
+    echo "No se han encontrado resultados para Bitcoin Cash";
+}
+
 // Cerrar conexión
 mysqli_close($connection);
 ?>
@@ -110,9 +140,6 @@ mysqli_close($connection);
                           >Company
                         </a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="./about.html"
-                            >About us</a
-                          >
                           <a class="dropdown-item" href="./team.html">Team</a>
                           <a class="dropdown-item" href="blogg.html">Blog</a>
                           <a class="dropdown-item" href="./career.html"
@@ -178,57 +205,61 @@ mysqli_close($connection);
                 </div>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-6 col-12">
-              <div class="intro-form-exchange">
-                <form
-                  name="myform"
-                  class="currency_validate trade-form row g-3"
-                >
-                  <div class="col-12">
-                    <label class="form-label">Send</label>
-                    <div class="input-group">
-                      <select class="form-control" name="method">
-                        <option value="bank">USD</option>
-                        <option value="master">Euro</option>
-                      </select>
-                      <input
-                        type="text"
-                        name="currency_amount"
-                        class="form-control"
-                        placeholder="0.0214 BTC"
-                      />
-                    </div>
-                  </div>
 
-                  <div class="col-12">
-                    <label class="form-label">Receive</label>
-                    <div class="input-group">
-                      <select class="form-control" name="method">
-                        <option value="bank">BTC</option>
-                        <option value="master">ETH</option>
-                      </select>
-                      <input
-                        type="text"
-                        name="currency_amount"
-                        class="form-control"
-                        placeholder="0.0214 BTC"
-                      />
-                    </div>
-                  </div>
+              <div class="col-xl-4 col-lg-6 col-12">
+                  <div class="intro-form-exchange">
+                      <form
+                              name="myform"
+                              class="currency_validate trade-form row g-3"
+                      >
+                          <div class="col-12">
+                              <label class="form-label">Send</label>
+                              <div class="input-group">
+                                  <select class="form-control" name="method">
+                                      <option value="bank">USD</option>
+                                  </select>
+                                  <input
+                                          type="text"
+                                          name="v1"
+                                          class="form-control"
+                                          placeholder="0.0214 BTC"
+                                  />
+                              </div>
+                          </div>
 
-                  <p class="mb-0">
-                    1 USD ~ 0.000088 BTC
-                    <a href="#" class="yellowText">Expected rate <br />No extra fees</a>
-                  </p>
-                  <button type="button" class="btn btn-primary">Buy Now</button>
-                </form>
+                          <div class="col-12">
+                              <label class="form-label">Receive</label>
+                              <div class="input-group">
+                                  <select class="form-control" name="method">
+                                      <option value="bank">BTC</option>
+                                      <option value="master">ETH</option>
+                                  </select>
+                                  <input
+                                          type="text"
+                                          name="v2"
+
+                                          class="form-control"
+                                          placeholder="0.0214 BTC"
+                                  />
+                              </div>
+                          </div>
+
+
+                          <p class="mb-0">
+                              1 USD ~ 0.000088 BTC
+                              <a href="#" class="yellowText">Expected rate <br />No extra fees</a>
+                          </p>
+                          <button type="button" id="calculate-button" class="btn btn-primary">Calculate</button>
+                      </form>
+                  </div>
+                  <div id="result"></div>
               </div>
-            </div>
           </div>
         </div>
       </div>
 
-      <div class="market section-padding page-section" data-scroll-index="1">
+
+        <div class="market section-padding page-section" data-scroll-index="1">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-8">
@@ -263,9 +294,20 @@ mysqli_close($connection);
                         <td>USD <?php echo number_format($rowBTC1, 2, '.', ',');?></td>
                         </td>
                         <td>
-                          <span class="text-success">+1.13%</span>
+                            <?php
+                            if ($rowBTC1 > $rowBTC2){
+                                $color = "text-success";
+                            }
+                            else{
+                                $color = "text-danger";
+                            }
+                            ?>
+                            <span class="<?php echo $color?>"><?php
+                                $result =number_format(($rowBTC1 - $rowBTC2) / $rowBTC2 * 100, 2);
+                                echo $result . "%"
+                                ?></span>
                         </td>
-                        <td><a href="#" class="btn btn-outline-dark px-4">Buy</a></td>
+                        <td><a href="login/signin.php" class="btn btn-outline-dark px-4">Buy</a></td>
                       </tr>
                       <tr>
                         <td class="coin_icon">
@@ -275,9 +317,20 @@ mysqli_close($connection);
 
                         <td>USD <?php echo number_format($rowETH1, 2, '.', ',');?></td>
                         <td>
-                          <span class="text-success">+1.13%</span>
+                            <?php
+                            if ($rowETH1 > $rowETH2){
+                                $color = "text-success";
+                            }
+                            else{
+                                $color = "text-danger";
+                            }
+                            ?>
+                            <span class="<?php echo $color?>"><?php
+                                $result =number_format(($rowETH1 - $rowETH2) / $rowETH2 * 100, 2);
+                                echo $result . "%"
+                                ?></span>
                         </td>
-                        <td><a href="#" class="btn btn-outline-dark px-4">Buy</a></td>
+                        <td><a href="login/signin.php" class="btn btn-outline-dark px-4">Buy</a></td>
                       </tr>
                       <tr>
                         <td class="coin_icon">
@@ -285,11 +338,24 @@ mysqli_close($connection);
                           <span>Bitcoin Cash <b>BCH</b></span>
                         </td>
 
-                        <td>USD 680,175.06</td>
+                        <td>USD <?php
+                            echo number_format($rowBCH1,2,'.',',')
+                            ?></td>
                         <td>
-                          <span class="text-success">+1.13%</span>
+                            <?php
+                            if ($rowBCH1 < $rowBCH2){
+                                $color = "text-success";
+                            }
+                            else{
+                                $color = "text-danger";
+                            }
+                            ?>
+                          <span class="<?php echo $color?>"><?php
+                              $result = number_format(($rowBCH1 - $rowBCH2) / $rowBCH2 * 100,2);
+                                echo $result . '%';
+                              ?></span>
                         </td>
-                        <td><a href="#" class="btn btn-outline-dark px-4">Buy</a></td>
+                        <td><a href="login/signin.php" class="btn btn-outline-dark px-4">Buy</a></td>
                       </tr>
                       <tr>
                         <td class="coin_icon">
@@ -297,11 +363,22 @@ mysqli_close($connection);
                           <span>Litecoin <b>LTC</b></span>
                         </td>
 
-                        <td>USD 680,175.06</td>
+                        <td>USD <?php echo number_format($rowLTC1,2,'.',',')?></td>
                         <td>
-                          <span class="text-danger">-0.47%</span>
+                            <?php
+                            if ($rowLTC1 > $rowLTC2){
+                                $color = "text-success";
+                            }
+                            else{
+                                $color = "text-danger";
+                            }
+                            ?>
+                            <span class="<?php echo $color?>"><?php
+                                $result =number_format(($rowLTC1 - $rowLTC2) / $rowLTC2 * 100, 2);
+                                echo $result . "%"
+                                ?></span>
                         </td>
-                        <td><a href="#" class="btn btn-outline-dark px-4">Buy</a></td>
+                        <td><a href="login/signin.php" class="btn btn-outline-dark px-4">Buy</a></td>
                       </tr>
                     </tbody>
                   </table>
@@ -785,3 +862,7 @@ mysqli_close($connection);
     }
 
 </style>
+
+
+
+

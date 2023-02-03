@@ -27,9 +27,9 @@
             <div class="col-xl-5 col-md-6">
               <div class="mini-logo text-center my-4">
                 <a href="../index.php"
-                  ><img src="../images/logo.png" alt=""
+                  ><img src="../images/logow.png" alt=""
                 /></a>
-                <h4 class="card-title mt-5">Hi! Welcome back to CriptoBroker</h4>
+                <h4 class="card-title mt-5 text-white">Hi! Welcome back to CriptoBroker</h4>
               </div>
               <div class="auth-form card">
                 <div class="card-body">
@@ -58,19 +58,21 @@
                     <div class="col-6">
                       <div class="form-check form-switch">
                         <input
-                          class="form-check-input"
+                          class="form-check-input "
                           type="checkbox"
                           id="flexSwitchCheckDefault"
+
                         />
                         <label
                           class="form-check-label"
                           for="flexSwitchCheckDefault"
+                          style="color: black"
                           >Remember me</label
                         >
                       </div>
                     </div>
                     <div class="col-6 text-right">
-                      <a href="../reset.html">Forgot Password?</a>
+                      <a href="../reset.html" class="yellowText">Forgot Password?</a>
                     </div>
                     <div class="d-grid gap-2">
                       <button type="submit" class="btn btn-primary">
@@ -78,7 +80,7 @@
                       </button>
                     </div>
                   </form>
-                  <p class="mt-3 mb-0">
+                  <p class="mt-3 mb-0" style="color: black">
                     New here? Join us!
                     <a class="text-primary" href="signup.php">Now</a>
                   </p>
@@ -87,7 +89,7 @@
               <div class="privacy-link">
 
                 <br />
-                <a href="../privacy-policy.html">Privacy Policy and Terms of Use</a>
+                <a href="../privacy-policy.html" class="text-white">Privacy Policy and Terms of Use</a>
               </div>
             </div>
           </div>
@@ -101,3 +103,55 @@
     <script src="../js/scripts.js"></script>
   </body>
 </html>
+<style>
+    .btn-primary {
+        background-color: #c2b42c !important;
+        border-color: #c2b42c !important;
+    }
+    .text-primary {
+        color: #c2b42c !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #867d1e !important;
+        border-color: #867d1e !important;
+    }
+
+    .btn-primary:focus {
+        background-color: #867d1e !important;
+        border-color: #867d1e !important;
+    }
+
+    .header-text{
+        color: #867d1e !important;
+    }
+    #main-wrapper , .footer , .bottom, .intro2 , .header, .contact-form , .bg-light {
+        background: #000000 !important;
+    }
+
+    .sparkline8{
+        fill:#c2b42c !important;
+    }
+
+    h2, .fa, .yellowText{
+        color: #c2b42c !important;
+    }
+
+    .section-title{
+        color: rgb(161, 161, 161) !important;
+    }
+    .trust-content{
+        color: rgb(161, 161, 161) !important;
+    }
+
+    .btn-outline-dark{
+        color: #c2b42c !important;
+        border-color: #c2b42c !important;
+    }
+    .btn-outline-dark:hover{
+        color: white !important;
+        border-color: #c2b42c !important;
+        background: #c2b42c !important;
+    }
+
+</style>

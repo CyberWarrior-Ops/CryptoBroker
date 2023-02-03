@@ -1,10 +1,29 @@
+<?php
+
+session_start();
+
+$connection = mysqli_connect("localhost","root","","Cripto");
+
+if(!isset($_SESSION['email'])){
+    echo '
+        <script>
+            alert("You must login first");
+            window.location = "../login/signin.php";
+        </script>
+    ';
+    session_destroy();
+    die();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Tendex</title>
+    <title>CriptoBroker</title>
     <!-- Favicon icon -->
     <link
       rel="icon"
@@ -181,7 +200,7 @@
       <div class="sidebar">
         <div class="brand-logo">
           <a href="../index.php"
-            ><img src="../images/logoi.png" alt="" width="30" />
+            ><img src="../images/logow.png" alt="" width="30" />
           </a>
         </div>
         <div class="menu">
@@ -250,7 +269,9 @@
               <div class="page-title-content">
                 <p>
                   Welcome Back,
-                  <strong> Jannatul Maowa!</strong>
+                  <strong> <?php
+                    echo $_SESSION['FullName'];
+                  ?>!</strong>
                 </p>
               </div>
             </div>
@@ -262,10 +283,12 @@
                   <div class="card welcome-profile">
                     <div class="card-body">
                       <img src="../images/profile/2.png" alt="" />
-                      <h4>Hi, Jannatul Maowa!</h4>
+                      <h4>Hi, <?php
+                        echo $_SESSION['FullName'];
+                      ?>!</h4>
                       <p>
                         Looks like you are not verified yet. Verify yourself to
-                        use the full potential of Tendex.
+                        use the full potential of CriptoBroker.
                       </p>
 
                       <ul>
@@ -860,3 +883,5 @@
     <script src="../js/scripts.js"></script>
   </body>
 </html>
+
+
