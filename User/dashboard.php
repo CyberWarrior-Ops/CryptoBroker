@@ -14,7 +14,26 @@ if(!isset($_SESSION['email'])){
     session_destroy();
     die();
 }
+$GetCriptos = "SELECT EW.ammount Etherium, bw.ammount Bitcoin, lt.ammount LiteCoin
+from EtheriumWallet EW
+join BitcoinWallet bw on EW.ID = bw.ID
+join LiteCoinWallet lt on lt.ID = bw.ID
+join login l on l.ID =lt.ID
+WHERE l.email = 'admin@gmail.com'";
+
+$result = mysqli_query($connection,$GetCriptos);
+
+if($result){
+    $row = mysqli_fetch_assoc($result);
+    $EtW =10;
+    $BTW =0;
+    $LTW=0;
+    $EtW = $row['Etherium'];
+    $BTW = $row['Bitcoin'];
+    $LTW = $row['LiteCoin'];
+}
 ?>
+
 
 
 <!DOCTYPE html>
@@ -570,8 +589,7 @@ if(!isset($_SESSION['email'])){
                             <h5>$0.0000</h5>
                             <span
                               >Trade balance combined with unrealized
-                              profit/loss</span
-                            >
+                              profit/loss</span>
                           </div>
                         </li>
                         <li>
@@ -579,8 +597,7 @@ if(!isset($_SESSION['email'])){
                           <div class="text-end">
                             <h5>$0.0000</h5>
                             <span
-                              >Total margin amount used in open positions.</span
-                            >
+                              >Total margin amount used in open positions.</span>
                           </div>
                         </li>
                         <li>
@@ -589,8 +606,7 @@ if(!isset($_SESSION['email'])){
                             <h5>$0.0000</h5>
                             <span
                               >Usable margin balance. Equal to equity
-                              minus.</span
-                            >
+                              minus.</span>
                           </div>
                         </li>
                         <li>
@@ -598,8 +614,7 @@ if(!isset($_SESSION['email'])){
                           <div class="text-end">
                             <h5>$0.0000</h5>
                             <span
-                              >Percentage ratio of equity to used margin.</span
-                            >
+                              >Percentage ratio of equity to used margin.</span>
                           </div>
                         </li>
                       </ul>
@@ -668,7 +683,6 @@ if(!isset($_SESSION['email'])){
                     </div>
                   </div>
                 </div>
-
                 <div class="col-xxl-4 col-xl-12">
                   <div class="row">
                     <div class="col-xxl-12 col-xl-4 col-lg-6">
@@ -679,7 +693,8 @@ if(!isset($_SESSION['email'])){
                               <i class="cc BTC"></i>
                               <span>Bitcoin</span>
                             </div>
-                            <h5>$ 11,785.10</h5>
+                            <h5>$ <?php
+                                echo $BTW;?></h5>
                           </div>
                           <div id="chart"></div>
                         </a>
