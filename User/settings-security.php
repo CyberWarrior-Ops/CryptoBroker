@@ -112,7 +112,7 @@
                           </div>
                         </a>
 
-                        <a href="settings-activity.html"
+                        <a href="settings-activity.php"
                           >More <i class="icofont-simple-right"></i
                         ></a>
                       </div>
@@ -151,19 +151,19 @@
                           <span>0.00 USD</span>
                         </div>
                       </div>
-                      <a href="profile.html" class="dropdown-item">
+                      <a href="profile.uknow" class="dropdown-item">
                         <i class="bi bi-person"></i>Profile
                       </a>
-                      <a href="../Wallet/wallet.html" class="dropdown-item">
+                      <a href="../Wallet/wallet.php" class="dropdown-item">
                         <i class="bi bi-wallet"></i>Wallet
                       </a>
-                      <a href="settings-profile.html" class="dropdown-item">
+                      <a href="settings-profile.php" class="dropdown-item">
                         <i class="bi bi-gear"></i> Setting
                       </a>
-                      <a href="settings-activity.html" class="dropdown-item">
+                      <a href="settings-activity.php" class="dropdown-item">
                         <i class="bi bi-clock-history"></i> Activity
                       </a>
-                      <a href="../lock.html" class="dropdown-item">
+                      <a href="../reset/lock.html" class="dropdown-item">
                         <i class="bi bi-lock"></i>Lock
                       </a>
                       <a href="../login/signin.php" class="dropdown-item logout">
@@ -198,7 +198,7 @@
             </li>
             <li>
               <a
-                href="../Wallet/trade.html"
+                href="../Wallet/trade.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Trade"
@@ -208,7 +208,7 @@
             </li>
             <li>
               <a
-                href="../Wallet/wallet.html"
+                href="../Wallet/wallet.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Wallet"
@@ -218,7 +218,7 @@
             </li>
             <li>
               <a
-                href="settings-profile.html"
+                href="settings-profile.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Settings"
@@ -253,13 +253,13 @@
               <div class="card">
                 <div class="card-header">
                   <div class="settings-menu">
-                    <a href="settings-profile.html">Profile</a>
-                    <a href="settings-application.html">Application</a>
+                    <a href="settings-profile.php">Profile</a>
+                    <a href="settings-application.php">Application</a>
                     <a href="settings-security.html">Security</a>
-                    <a href="settings-activity.html">Activity</a>
-                    <a href="settings-privacy.html">Privacy</a>
-                    <a href="settings-payment-method.html">Payment Method</a>
-                    <a href="settings-api.html">API</a>
+                    <a href="settings-activity.php">Activity</a>
+                    <a href="settings-privacy.php">Privacy</a>
+                    <a href="settings-payment-method.php">Payment Method</a>
+                    <a href="settings-api.php">API</a>
                     <a href="settings-fees.html">Fees</a>
                   </div>
                 </div>

@@ -140,9 +140,9 @@ mysqli_close($connection);
                           >Company
                         </a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="./team.html">Team</a>
+                          <a class="dropdown-item" href="team.php">Team</a>
                           <a class="dropdown-item" href="blogg.html">Blog</a>
-                          <a class="dropdown-item" href="./career.html"
+                          <a class="dropdown-item" href="career.php"
                             >Career</a
                           >
                         </div>
@@ -155,16 +155,16 @@ mysqli_close($connection);
                           >Support
                         </a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="./contact.html"
+                          <a class="dropdown-item" href="contact.php"
                             >Contact us</a
                           >
-                          <a class="dropdown-item" href="./helpdesk.html"
+                          <a class="dropdown-item" href="helpdesk.php"
                             >Help Desk</a
                           >
-                          <a class="dropdown-item" href="./privacy-policy.html"
+                          <a class="dropdown-item" href="legal/privacy-policy.php"
                             >Privacy</a
                           >
-                          <a class="dropdown-item" href="./faq.html">FAQ</a>
+                          <a class="dropdown-item" href="faq.php">FAQ</a>
                         </div>
                       </li>
                     </ul>
@@ -705,10 +705,10 @@ mysqli_close($connection);
               <div class="bottom-widget">
                 <h4 class="widget-title">Company</h4>
                 <ul>
-                  <li ><a href="about.html" class="yellowText">About</a></li>
-                  <li class="yellowText"><a href="career.html" class="yellowText">Career</a></li>
+                  <li ><a href="about.php" class="yellowText">About</a></li>
+                  <li class="yellowText"><a href="career.php" class="yellowText">Career</a></li>
                   <li class="yellowText"><a href="#" class="yellowText">Affiliate</a></li>
-                  <li class="yellowText"><a href="team.html" class="yellowText">Our Team</a></li>
+                  <li class="yellowText"><a href="team.php" class="yellowText">Our Team</a></li>
                 </ul>
               </div>
             </div>
@@ -716,10 +716,10 @@ mysqli_close($connection);
               <div class="bottom-widget">
                 <h4 class="widget-title">Support</h4>
                 <ul>
-                  <li class="yellowText"><a href="contact.html" class="yellowText">Contact us</a></li>
-                  <li class="yellowText"><a href="faq.html"class="yellowText">FAQ</a></li>
+                  <li class="yellowText"><a href="contact.php" class="yellowText">Contact us</a></li>
+                  <li class="yellowText"><a href="faq.php" class="yellowText">FAQ</a></li>
                   <li class="yellowText"><a href="blogg.html" class="yellowText">Blog</a></li>
-                  <li class="yellowText"><a href="helpdesk.html"class="yellowText">Helpdesk</a></li>
+                  <li class="yellowText"><a href="helpdesk.php" class="yellowText">Helpdesk</a></li>
                 </ul>
               </div>
             </div>

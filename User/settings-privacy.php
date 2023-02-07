@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
-  <body class="@@dashboard">
+  <body class="dashboard">
     <div id="preloader"><i>.</i><i>.</i><i>.</i></div>
 
     <div id="main-wrapper">
-      <div class="header @@bg">
+      <div class="header bg-light">
         <div class="container-fluid">
           <div class="row">
             <div class="col-xxl-12">
@@ -112,7 +112,7 @@
                           </div>
                         </a>
 
-                        <a href="./settings-activity.html"
+                        <a href="settings-activity.php"
                           >More <i class="icofont-simple-right"></i
                         ></a>
                       </div>
@@ -151,19 +151,19 @@
                           <span>0.00 USD</span>
                         </div>
                       </div>
-                      <a href="profile.html" class="dropdown-item">
+                      <a href="profile.uknow" class="dropdown-item">
                         <i class="bi bi-person"></i>Profile
                       </a>
-                      <a href="../Wallet/wallet.html" class="dropdown-item">
+                      <a href="../Wallet/wallet.php" class="dropdown-item">
                         <i class="bi bi-wallet"></i>Wallet
                       </a>
-                      <a href="settings-profile.html" class="dropdown-item">
+                      <a href="settings-profile.php" class="dropdown-item">
                         <i class="bi bi-gear"></i> Setting
                       </a>
-                      <a href="settings-activity.html" class="dropdown-item">
+                      <a href="settings-activity.php" class="dropdown-item">
                         <i class="bi bi-clock-history"></i> Activity
                       </a>
-                      <a href="../lock.html" class="dropdown-item">
+                      <a href="../reset/lock.html" class="dropdown-item">
                         <i class="bi bi-lock"></i>Lock
                       </a>
                       <a href="../login/signin.php" class="dropdown-item logout">
@@ -198,7 +198,7 @@
             </li>
             <li>
               <a
-                href="../Wallet/trade.html"
+                href="../Wallet/trade.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Trade"
@@ -208,7 +208,7 @@
             </li>
             <li>
               <a
-                href="../Wallet/wallet.html"
+                href="../Wallet/wallet.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Wallet"
@@ -218,7 +218,7 @@
             </li>
             <li>
               <a
-                href="settings-profile.html"
+                href="settings-profile.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Settings"
@@ -246,12 +246,136 @@
       <div class="content-body">
         <div class="container">
           <div class="row">
-            <div class="col-xl-3">
+            <div class="col-xxl-12">
+              <div class="page-title">
+                <h4>Privacy</h4>
+              </div>
               <div class="card">
                 <div class="card-header">
-                  <h4 class="card-title">Portfolio</h4>
+                  <div class="settings-menu">
+                    <a href="settings-profile.php">Profile</a>
+                    <a href="settings-application.php">Application</a>
+                    <a href="settings-security.php">Security</a>
+                    <a href="settings-activity.php">Activity</a>
+                    <a href="settings-privacy.html">Privacy</a>
+                    <a href="settings-payment-method.php">Payment Method</a>
+                    <a href="settings-api.php">API</a>
+                    <a href="settings-fees.html">Fees</a>
+                  </div>
                 </div>
-                <div class="card-body"></div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-xl-12">
+                      <div class="card">
+                        <div class="card-header px-0">
+                          <h4 class="card-title">Privacy options</h4>
+                        </div>
+                        <div class="card-body px-0">
+                          <h5>Instant sends</h5>
+                          <p class="mb-1">
+                            Allow other users to see that you use Tendex and
+                            send you crypto instantly
+                          </p>
+                          <div class="form-check form-switch mt-3">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              id="s8"
+                              checked
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header px-0">
+                          <h4 class="card-title">Your Tendex account</h4>
+                        </div>
+                        <div class="card-body px-0">
+                          <p>
+                            You have a number of rights over your personal data.
+                            For more detailed information on these choices,
+                            please read our full
+                            <a href="#">Privacy Policy</a> and our
+                            <a href="#">Cookie Policy</a>.
+                          </p>
+
+                          <hr class="dropdown-divider my-4" />
+
+                          <div class="privacy-content">
+                            <h5>Request Data</h5>
+                            <p>
+                              Request a copy of my personal data held by Tendex.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary"
+                              >Request data</a
+                            >
+                          </div>
+
+                          <hr class="dropdown-divider my-4" />
+
+                          <div class="privacy-content">
+                            <h5>Request Deletion</h5>
+                            <p>Request deletion of some or all of my data</p>
+                            <a href="#" class="btn btn-outline-primary"
+                              >Request deletion</a
+                            >
+                          </div>
+
+                          <hr class="dropdown-divider my-4" />
+
+                          <div class="privacy-content">
+                            <h5>Request export</h5>
+                            <p>
+                              Request export of my data in a machine-readable
+                              form.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary"
+                              >Request data export</a
+                            >
+                          </div>
+
+                          <hr class="dropdown-divider my-4" />
+
+                          <div class="privacy-content">
+                            <h5>Request Correction</h5>
+                            <p>
+                              Request to correct, modify, or complete my data.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary"
+                              >Request correction</a
+                            >
+                          </div>
+
+                          <hr class="dropdown-divider my-4" />
+
+                          <div class="privacy-content">
+                            <h5>
+                              Request Restriction of Processing (EU and Japan
+                              Residents only)
+                            </h5>
+                            <p>
+                              Request that Tendex stops processing my personal
+                              data.
+                            </p>
+                            <a href="#" class="btn btn-outline-primary"
+                              >Request restriction</a
+                            >
+                          </div>
+
+                          <hr class="dropdown-divider my-4" />
+
+                          <div class="privacy-content">
+                            <h5>Manage Cookies</h5>
+                            <p>Manage your cookie preferences.</p>
+                            <a href="#" class="btn btn-outline-primary"
+                              >Request cookies</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -261,9 +385,6 @@
 
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script src="../vendor/apexchart/apexcharts.min.js"></script>
-    <script src="../js/plugins/apex-price.js"></script>
 
     <script src="../js/scripts.js"></script>
   </body>

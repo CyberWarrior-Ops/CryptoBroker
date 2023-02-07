@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
-  <body class="@@dashboard">
+  <body class="dashboard">
     <div id="preloader"><i>.</i><i>.</i><i>.</i></div>
 
     <div id="main-wrapper">
-      <div class="header @@bg">
+      <div class="header bg-light">
         <div class="container-fluid">
           <div class="row">
             <div class="col-xxl-12">
@@ -112,7 +112,7 @@
                           </div>
                         </a>
 
-                        <a href="settings-activity.html"
+                        <a href="settings-activity.php"
                           >More <i class="icofont-simple-right"></i
                         ></a>
                       </div>
@@ -151,19 +151,19 @@
                           <span>0.00 USD</span>
                         </div>
                       </div>
-                      <a href="profile.html" class="dropdown-item">
+                      <a href="profile.uknow" class="dropdown-item">
                         <i class="bi bi-person"></i>Profile
                       </a>
-                      <a href="../Wallet/wallet.html" class="dropdown-item">
+                      <a href="../Wallet/wallet.php" class="dropdown-item">
                         <i class="bi bi-wallet"></i>Wallet
                       </a>
-                      <a href="settings-profile.html" class="dropdown-item">
+                      <a href="settings-profile.php" class="dropdown-item">
                         <i class="bi bi-gear"></i> Setting
                       </a>
-                      <a href="settings-activity.html" class="dropdown-item">
+                      <a href="settings-activity.php" class="dropdown-item">
                         <i class="bi bi-clock-history"></i> Activity
                       </a>
-                      <a href="../lock.html" class="dropdown-item">
+                      <a href="../reset/lock.html" class="dropdown-item">
                         <i class="bi bi-lock"></i>Lock
                       </a>
                       <a href="../login/signin.php" class="dropdown-item logout">
@@ -198,7 +198,7 @@
             </li>
             <li>
               <a
-                href="../Wallet/trade.html"
+                href="../Wallet/trade.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Trade"
@@ -208,7 +208,7 @@
             </li>
             <li>
               <a
-                href="../Wallet/wallet.html"
+                href="../Wallet/wallet.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Wallet"
@@ -218,7 +218,7 @@
             </li>
             <li>
               <a
-                href="settings-profile.html"
+                href="settings-profile.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Settings"
@@ -246,135 +246,169 @@
       <div class="content-body">
         <div class="container">
           <div class="row">
-            <div class="col-xxl-6 col-xl-6 col-lg-6">
-              <div class="card welcome-profile">
-                <div class="card-body">
-                  <img src="../images/profile/2.png" alt="" />
-                  <h4>Welcome, Jannatul Maowa!</h4>
-                  <p>
-                    Looks like you are not verified yet. Verify yourself to use
-                    the full potential of Tendex.
-                  </p>
-
-                  <ul>
-                    <li>
-                      <a href="#">
-                        <span class="verified"
-                          ><i class="icofont-check-alt"></i
-                        ></span>
-                        Verify account
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span class="not-verified"
-                          ><i class="icofont-close-line"></i
-                        ></span>
-                        Two-factor authentication (2FA)
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+            <div class="col-xxl-12">
+              <div class="page-title">
+                <h4>API</h4>
               </div>
-            </div>
-            <div class="col-xxl-6 col-xl-6 col-lg-6">
               <div class="card">
                 <div class="card-header">
-                  <h4 class="card-title">Download App</h4>
-                </div>
-                <div class="card-body">
-                  <div class="app-link">
-                    <h5>Get Verified On Our Mobile App</h5>
-                    <p>
-                      Verifying your identity on our mobile app more secure,
-                      faster, and reliable.
-                    </p>
-                    <a href="#" class="btn btn-primary">
-                      <img src="../images/android.svg" alt="" />
-                    </a>
-                    <br />
-                    <div class="mt-3"></div>
-                    <a href="#" class="btn btn-primary">
-                      <img src="../images/apple.svg" alt="" />
-                    </a>
+                  <div class="settings-menu">
+                    <a href="settings-profile.php">Profile</a>
+                    <a href="settings-application.php">Application</a>
+                    <a href="settings-security.php">Security</a>
+                    <a href="settings-activity.php">Activity</a>
+                    <a href="settings-privacy.php">Privacy</a>
+                    <a href="settings-payment-method.php">Payment Method</a>
+                    <a href="settings-api.html">API</a>
+                    <a href="settings-fees.html">Fees</a>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="col-xxl-12">
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="card-title">Information</h4>
-                  <a href="settings-profile.html" class="btn btn-primary"
-                    >Edit</a
-                  >
-                </div>
                 <div class="card-body">
-                  <form class="row">
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                      <div class="user-info">
-                        <span>USER ID</span>
-                        <h4>818778</h4>
+                  <div class="row">
+                    <div class="col-xxl-12">
+                      <div class="card">
+                        <div class="card-header px-0">
+                          <h4 class="card-title">Create API Key</h4>
+                        </div>
+                        <div class="card-body px-0">
+                          <form action="#">
+                            <div class="row g-3">
+                              <div class="col-xl-6 col-md-6">
+                                <label class="form-label"
+                                  >Generate New Key</label
+                                >
+                                <input
+                                  type="text"
+                                  name="usd_amount"
+                                  class="form-control"
+                                  placeholder="Enter Passphrase"
+                                />
+                              </div>
+                              <div class="col-xl-6 col-md-6">
+                                <label class="form-label"
+                                  >Confirm Passphrase</label
+                                >
+                                <input
+                                  type="text"
+                                  name="usd_amount"
+                                  class="form-control"
+                                  placeholder="Re-enter passphrase"
+                                />
+                              </div>
+                              <div class="col-auto">
+                                <button class="btn btn-primary">
+                                  Create API Keys
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                      <div class="user-info">
-                        <span>EMAIL ADDRESS</span>
-                        <h4>email@example.com</h4>
+                    <div class="col-xl-12">
+                      <div class="card">
+                        <div class="card-header px-0">
+                          <h4 class="card-title">Your API Keys</h4>
+                        </div>
+                        <div class="card-body px-0">
+                          <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Key</th>
+                                  <th>Status</th>
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>69e387f1-31c3-45ad-9c68-5a51e5e78b43</td>
+                                  <td>
+                                    <div class="form-check form-switch">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        checked
+                                      />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <span>
+                                      <i class="icofont-ui-delete"></i>
+                                    </span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>69e387f1-31c3-45ad-9c68-5a51e5e78b43</td>
+                                  <td>
+                                    <div class="form-check form-switch">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                      />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <span>
+                                      <i class="icofont-ui-delete"></i>
+                                    </span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>69e387f1-31c3-45ad-9c68-5a51e5e78b43</td>
+                                  <td>
+                                    <div class="form-check form-switch">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                      />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <span>
+                                      <i class="icofont-ui-delete"></i>
+                                    </span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>69e387f1-31c3-45ad-9c68-5a51e5e78b43</td>
+                                  <td>
+                                    <div class="form-check form-switch">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                      />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <span>
+                                      <i class="icofont-ui-delete"></i>
+                                    </span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>69e387f1-31c3-45ad-9c68-5a51e5e78b43</td>
+                                  <td>
+                                    <div class="form-check form-switch">
+                                      <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                      />
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <span>
+                                      <i class="icofont-ui-delete"></i>
+                                    </span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                      <div class="user-info">
-                        <span>COUNTRY OF RESIDENCE</span>
-                        <h4>Bangladesh</h4>
-                      </div>
-                    </div>
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                      <div class="user-info">
-                        <span>JOINED SINCE</span>
-                        <h4>20/10/2020</h4>
-                      </div>
-                    </div>
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-                      <div class="user-info">
-                        <span>TYPE</span>
-                        <h4>Personal</h4>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xxl-8 col-xl-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="card-title">VERIFY & UPGRADE</h4>
-                </div>
-                <div class="card-body">
-                  <h5>
-                    Account Status :
-                    <span class="text-warning"
-                      >Pending <i class="icofont-warning"></i
-                    ></span>
-                  </h5>
-                  <p>
-                    Your account is unverified. Get verified to enable funding,
-                    trading, and withdrawal.
-                  </p>
-                  <a href="#" class="btn btn-primary"> Get Verified</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xxl-4 col-xl-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="card-title">Earn 30% Commission</h4>
-                </div>
-                <div class="card-body">
-                  <p>Refer your friends and earn 30% of their trading fees.</p>
-                  <a href="#" class="btn btn-primary"> Referral Program</a>
+                  </div>
                 </div>
               </div>
             </div>

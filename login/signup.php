@@ -79,7 +79,7 @@
                           agree to the
                           <a href="#" class="text-primary">User Agreement</a>
                           and
-                          <a href="../privacy-policy.html" class="text-primary"
+                          <a href="../legal/privacy-policy.php" class="text-primary"
                             >Privacy Policy</a
                           >.
                         </label>

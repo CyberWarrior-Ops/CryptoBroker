@@ -72,7 +72,7 @@
                       </div>
                     </div>
                     <div class="col-6 text-right">
-                      <a href="../reset.html" class="yellowText">Forgot Password?</a>
+                      <a href="../reset/reset.html" class="yellowText">Forgot Password?</a>
                     </div>
                     <div class="d-grid gap-2">
                       <button type="submit" class="btn btn-primary">
@@ -89,7 +89,7 @@
               <div class="privacy-link">
 
                 <br />
-                <a href="../privacy-policy.html" class="text-white">Privacy Policy and Terms of Use</a>
+                <a href="../legal/privacy-policy.php" class="text-white">Privacy Policy and Terms of Use</a>
               </div>
             </div>
           </div>

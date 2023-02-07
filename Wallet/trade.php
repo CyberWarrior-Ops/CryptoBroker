@@ -154,7 +154,7 @@
                       <a href="profile.html" class="dropdown-item">
                         <i class="bi bi-person"></i>Profile
                       </a>
-                      <a href="wallet.html" class="dropdown-item">
+                      <a href="wallet.php" class="dropdown-item">
                         <i class="bi bi-wallet"></i>Wallet
                       </a>
                       <a href="settings-profile.html" class="dropdown-item">
@@ -163,7 +163,7 @@
                       <a href="settings-activity.html" class="dropdown-item">
                         <i class="bi bi-clock-history"></i> Activity
                       </a>
-                      <a href="../lock.html" class="dropdown-item">
+                      <a href="../reset/lock.html" class="dropdown-item">
                         <i class="bi bi-lock"></i>Lock
                       </a>
                       <a href="../login/signin.php" class="dropdown-item logout">
@@ -208,7 +208,7 @@
             </li>
             <li>
               <a
-                href="wallet.html"
+                href="wallet.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Wallet"

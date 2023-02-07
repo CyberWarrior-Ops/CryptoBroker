@@ -18,8 +18,6 @@
   </head>
 
   <body class="@@dashboard">
-    <div id="preloader"><i>.</i><i>.</i><i>.</i></div>
-
     <div id="main-wrapper">
       <div class="header landing @@headerClass">
         <div class="container">
@@ -80,24 +78,24 @@
                         <a class="nav-link" href="details/price.html">Price</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link text-primary" href="./app.html"
-                          >App</a
-                        >
+                        <a class="nav-link" href="./app.html">App</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a
-                          class="nav-link dropdown-toggle"
+                          class="nav-link dropdown-toggle text-primary"
                           href="#"
                           data-toggle="dropdown"
                           >Company
                         </a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="./about.html"
+                          <a
+                            class="dropdown-item text-primary"
+                            href="about.php"
                             >About us</a
                           >
-                          <a class="dropdown-item" href="./team.html">Team</a>
+                          <a class="dropdown-item" href="team.php">Team</a>
                           <a class="dropdown-item" href="blogg.html">Blog</a>
-                          <a class="dropdown-item" href="./career.html"
+                          <a class="dropdown-item" href="career.php"
                             >Career</a
                           >
                         </div>
@@ -110,16 +108,16 @@
                           >Support
                         </a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="./contact.html"
+                          <a class="dropdown-item" href="contact.php"
                             >Contact us</a
                           >
-                          <a class="dropdown-item" href="./helpdesk.html"
+                          <a class="dropdown-item" href="helpdesk.php"
                             >Help Desk</a
                           >
-                          <a class="dropdown-item" href="./privacy-policy.html"
+                          <a class="dropdown-item" href="legal/privacy-policy.php"
                             >Privacy</a
                           >
-                          <a class="dropdown-item" href="./faq.html">FAQ</a>
+                          <a class="dropdown-item" href="faq.php">FAQ</a>
                         </div>
                       </li>
                       <li class="nav-item">
@@ -140,42 +138,72 @@
         </div>
       </div>
 
-      <div class="appss section-padding">
+      <div class="about-one section-padding">
         <div class="container">
           <div class="row align-items-center justify-content-between">
-            <div class="col-xl-5 col-lg-5 col-md-12">
-              <div class="appss-img">
-                <img class="img-fluid" src="./images/app2.png" alt="" />
+            <div class="col-lg-5">
+              <div class="service-content m-t-50">
+                <h2 class="mb-4">
+                  We are Tendex, a multidisciplinary creative team from
+                  Copenhagen
+                </h2>
+                <p>
+                  Founded in January of 2020, Tendex is a digital currency
+                  wallet and platform where merchants and consumers can transact
+                  with new digital currencies like bitcoin, ethereum, and
+                  litecoin. We're based in San Francisco, California.
+                </p>
+                <a href="#" class="btn btn-primary my-4">Get in Touch</a>
               </div>
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-12">
-              <div class="appss-content">
-                <h3>Mobile app</h3>
-                <p>
-                  Get the best mobile app to exchange or buy crypto on the go:
-                </p>
-                <ul>
-                  <li><i class="la la-check"></i> Best rates on the market</li>
-                  <li><i class="la la-check"></i> High limits</li>
-                  <li>
-                    <i class="la la-check"></i> No verification for exchange
-                    transactions
-                  </li>
-                  <li>
-                    <i class="la la-check"></i> More than 150 cryptocurrencies
-                  </li>
-                  <li>
-                    <i class="la la-check"></i> Buy bitcoin | buy crypto with
-                    USD, EUR or GBP
-                  </li>
-                </ul>
-                <div class="mt-4">
-                  <a href="#" class="btn btn-success my-1 waves-effect">
-                    <img src="./images/android.svg" alt="" />
-                  </a>
-                  <a href="#" class="btn btn-success my-1 waves-effect">
-                    <img src="./images/apple.svg" alt="" />
-                  </a>
+            <div class="col-lg-6">
+              <div class="service-img">
+                <img src="images/about/1.jpeg" alt="" class="img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-light py-6 py-lg-8 mt-6 mt-lg-0 section-padding">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <h2 class="font-weight-normal mt-4">
+                A team of digital enthusiasts ready for the next challenge
+              </h2>
+
+              <p class="text-muted mt-4">
+                Over the past decade, we've helped hundreds of companies thrive
+                in the digital world. Growing businesses through innovation is
+                our goal.
+              </p>
+            </div>
+
+            <div class="col-lg-7 offset-lg-1 mt-4 mt-lg-0">
+              <div class="row g-0">
+                <div
+                  class="col-6 bg-white text-purple text-center py-5 py-md-7"
+                >
+                  <h1 class="display-3">30k</h1>
+                  <p class="m-0">paying customers</p>
+                </div>
+
+                <div class="col-6 bg-purple text-center py-5 py-md-7">
+                  <h1 class="display-3 text-white">$100m</h1>
+                  <p class="m-0 text-white">in funding</p>
+                </div>
+
+                <div class="col-6 bg-purple text-center py-5 py-md-7">
+                  <h1 class="display-3 text-white">2012</h1>
+                  <p class="m-0 text-white">founded</p>
+                </div>
+
+                <div
+                  class="col-6 bg-white text-purple text-center py-5 py-md-7"
+                >
+                  <h1 class="display-3">99.8%</h1>
+                  <p class="m-0">uptime</p>
                 </div>
               </div>
             </div>
@@ -183,66 +211,23 @@
         </div>
       </div>
 
-      <div class="wallet-feature section-padding bg-light">
+      <div class="about-two section-padding">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-8">
-              <div class="section-title">
-                <h2>Tendex for wallets</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-              <div class="wallet-feature-content">
-                <span><i class="bi bi-cash"></i></span>
-                <h4>Built-in white-label instant exchange</h4>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-              <div class="wallet-feature-content">
-                <span><i class="bi bi-headset"></i></span>
-                <h4>Dedicated support line</h4>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-              <div class="wallet-feature-content">
-                <span><i class="bi bi-wallet2"></i></span>
-                <h4>Top-up the wallet with 140+ cryptos</h4>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-              <div class="wallet-feature-content">
-                <span><i class="bi bi-x-octagon"></i></span>
-                <h4>Vast cross-marketing opportunities</h4>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-              <div class="wallet-feature-content">
-                <span><i class="bi bi-clipboard-check"></i></span>
-                <h4>Revenue share from every transaction</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="all-coin section-padding">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-8">
-              <div class="section-title text-center">
-                <h2>Easily send and receive crypto</h2>
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="service-content my-5">
+                <h3>Working at Tendex</h3>
                 <p>
-                  Pay anyone in the world with just their Tendex Wallet username
+                  Digital currencies are changing how we use and think about
+                  money. Tendex, the most trusted company in the space, is
+                  looking for you to join our rapidly growing team.
                 </p>
+                <a href="#" class="btn btn-primary">Read more</a>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="wallet-map text-center">
-                <img src="./images/map.png" alt="" class="img-fluid" />
+            <div class="col-lg-6">
+              <div class="service-img">
+                <img src="images/about/1.jpg" alt="" class="img-fluid" />
               </div>
             </div>
           </div>
@@ -268,9 +253,9 @@
                 <h4 class="widget-title">Company</h4>
                 <ul>
                   <li><a href="about.html">About</a></li>
-                  <li><a href="career.html">Career</a></li>
+                  <li><a href="career.php">Career</a></li>
                   <li><a href="#">Affiliate</a></li>
-                  <li><a href="team.html">Our Team</a></li>
+                  <li><a href="team.php">Our Team</a></li>
                 </ul>
               </div>
             </div>
@@ -278,10 +263,10 @@
               <div class="bottom-widget">
                 <h4 class="widget-title">Support</h4>
                 <ul>
-                  <li><a href="contact.html">Contact us</a></li>
-                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.php">Contact us</a></li>
+                  <li><a href="faq.php">FAQ</a></li>
                   <li><a href="blogg.html">Blog</a></li>
-                  <li><a href="helpdesk.html">Helpdesk</a></li>
+                  <li><a href="helpdesk.php">Helpdesk</a></li>
                 </ul>
               </div>
             </div>

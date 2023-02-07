@@ -69,17 +69,17 @@
                         >Company
                         </a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="./about.html"
+                          <a class="dropdown-item" href="about.php"
                           >About us</a
                           >
-                          <a class="dropdown-item" href="./team.html">Team</a>
+                          <a class="dropdown-item" href="team.php">Team</a>
                           <a class="dropdown-item" href="blogg.html">Blog</a>
-                          <a class="dropdown-item" href="./career.html"
+                          <a class="dropdown-item" href="career.php"
                           >Career</a
                           >
                         </div>
                       </li>
-                      <li class="nav-item dropdown ">
+                      <li class="nav-item dropdown">
                         <a
                                 class="nav-link dropdown-toggle text-primary"
                                 href="#"
@@ -87,16 +87,16 @@
                         >Support
                         </a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="./contact.html"
+                          <a class="dropdown-item" href="contact.php"
                           >Contact us</a
                           >
-                          <a class="dropdown-item" href="./helpdesk.html"
+                          <a class="dropdown-item text-primary" href="helpdesk.php"
                           >Help Desk</a
                           >
-                          <a class="dropdown-item" href="./privacy-policy.html"
+                          <a class="dropdown-item" href="legal/privacy-policy.php"
                           >Privacy</a
                           >
-                          <a class="dropdown-item text-primary" href="./faq.html">FAQ</a>
+                          <a class="dropdown-item" href="faq.php">FAQ</a>
                         </div>
                       </li>
                     </ul>
@@ -112,178 +112,151 @@
         </div>
       </div>
 
-      <div class="terms_condition">
+      <div class="helpdesk-search section-padding bg-light">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-9">
-              <div class="terms_condition-content">
-                <div class="terms_condition-text">
-                  <h3>Frequently Asked Questions</h3>
-                  <p>
-                    Tendex is an instant cryptocurrency exchange that allows you
-                    to exchange crypto fast and buy it with a bank card. The
-                    service provides the best crypto-to-crypto rates and
-                    supports over 140 cryptocurrencies available for exchange
-                  </p>
+            <div class="col-xl-7">
+              <div class="helpdesk-search-content">
+                <p class="mb-1">Tendex knowledge Base</p>
+                <h2 class="mb-5">How can we help you today?</h2>
+                <div class="helpdesk-form">
+                  <form action="#">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search here"
+                    />
+                    <button type="submit" class="btn btn-primary">
+                      Search
+                    </button>
+                  </form>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                <div class="terms_condition-text">
-                  <h3>How does Tendex work?</h3>
-                  <p>
-                    Tendex’s trading algorithm is integrated into the largest
-                    cryptocurrency exchange platforms, including Binance,
-                    Poloniex, Bittrex, etc. In the span of milliseconds, Tendex
-                    makes bids and asks on the platforms, then selects and
-                    suggests the best available rate and displays the estimated
-                    rate on our site. The rates remain approximate until the
-                    transaction is actually made on the blockchain, which is why
-                    the exchange rate at the time of a transaction may differ
-                    slightly from the estimated rate that you see when you begin
-                    a transaction. To learn more about the process, see this
-                    <a href="#">article</a>
-                  </p>
+      <div class="help-category section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+              <div class="help-cat">
+                <span class="bi bi-camera-video"></span>
+                <h4>Video Guide</h4>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+              <div class="help-cat">
+                <span class="bi bi-clipboard-check"></span>
+                <h4>FAQ</h4>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+              <div class="help-cat">
+                <span class="bi bi-braces"></span>
+                <h4>API for developers</h4>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-auto">
+              <a href="#" class="sub-cat">
+                <h5>Troubleshooting</h5>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a href="#" class="sub-cat">
+                <h5>Partnership</h5>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a href="#" class="sub-cat">
+                <h5>Getting started</h5>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a href="#" class="sub-cat">
+                <h5>Wallets</h5>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a href="#" class="sub-cat">
+                <h5>Healthy Tips</h5>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a href="#" class="sub-cat">
+                <h5>Crypto-definitions</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="troubleshooting section-padding">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-8">
+              <div class="section-title text-center">
+                <h2>Troubleshooting</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="troubleshooting-content">
+                <div class="row">
+                  <div class="col-xl-4 col-lg-4 col-md-4">
+                    <h4>My Transaction</h4>
+                    <ul>
+                      <li><a href="#">My transaction is stuck</a></li>
+                      <li><a href="#">The amount is too low</a></li>
+                      <li><a href="#">Sorry, payment was not received</a></li>
+                      <li><a href="#">Still didn't get my refund</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4">
+                    <h4>My Wallet</h4>
+                    <ul>
+                      <li>
+                        <a href="#"
+                          >My wallet address is recognized as invalid</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#">What does ‘Not yet redeemed?’ mean</a>
+                      </li>
+                      <li>
+                        <a href="#">I sent my ABC coins to a non-ABC wallet</a>
+                      </li>
+                      <li><a href="#">ETH contract addresses</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4">
+                    <h4>Other</h4>
+                    <ul>
+                      <li><a href="#">Customer service doesn't reply</a></li>
+                      <li><a href="#">The amount is too low</a></li>
+                      <li><a href="#">Can't log in</a></li>
+                      <li><a href="#">Can’t enable / disable 2-FA</a></li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                <div class="terms_condition-text">
-                  <h3>Why should I trust you?</h3>
-                  <p>
-                    Tendex is one of the most prominent instant cryptocurrency
-                    exchanges that has gained the trust of more than 2M users
-                    from all over the world. The service provides safe and fast
-                    transactions without revealing users identities. We provide
-                    the best possible rates by comparing a wide range of
-                    reliable trading platforms and work with a list of 140+
-                    cryptocurrencies that is constantly increasing.
-                  </p>
-                  <ul>
-                    <li>
-                      <i class="bi bi-circle-fill"></i>
-                      <p>No deposit storage.</p>
-                    </li>
-                    <li>
-                      <i class="bi bi-circle-fill"></i>
-                      <p>Instant exchange.</p>
-                    </li>
-                    <li>
-                      <i class="bi bi-circle-fill"></i>
-                      <p>
-                        Each account is protected with 2-factor authentication
-                        and an HTTPS protocol.
-                      </p>
-                    </li>
-                    <li>
-                      <i class="bi bi-circle-fill"></i>
-                      <p>More than 2 million satisfied users.</p>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="terms_condition-text">
-                  <h3>Does Tendex fix rates?</h3>
-                  <p>
-                    Tendex mobile app does! Mobile app users will no longer be
-                    affected by the risks associated with crypto market
-                    fluctuations. Soon, the fixed-rate exchanges will also be
-                    implemented on the web version. To lock the current exchange
-                    rate, the user needs to click on the lock icon, which will
-                    result in them getting the exact same amount of crypto as is
-                    displayed on the screen. The rate is fixed for 15 minutes,
-                    which should be more than enough to carry out the exchange.
-                  </p>
-                  <p>
-                    Alternatively, Tendex offers our lowest fee of 0.25% for all
-                    crypto-to-crypto exchanges made at a floating rate.
-                  </p>
-                </div>
-
-                <div class="terms_condition-text">
-                  <h3>No warranties :</h3>
-                  <p>
-                    Elaenia is provided “as is” without any representations or
-                    warranties. Elaenia.com makes no representations or
-                    warranties in relation to this website or the information
-                    and materials provided on this website.
-                  </p>
-                  <p>Elaenia.com does not warrant that:</p>
-
-                  <ul>
-                    <li>
-                      <i class="bi bi-circle-fill"></i>
-                      <p>
-                        The website will be constantly available, or available
-                        at all moving forward.
-                      </p>
-                    </li>
-                    <li>
-                      <i class="bi bi-circle-fill"></i>
-                      <p>
-                        The information on this website is complete, true, or
-                        non-misleading.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="terms_condition-text">
-                  <h3>Privacy :</h3>
-                  <p>
-                    For details about our privacy policy, please refer to the
-                    privacy policy section.
-                  </p>
-                </div>
-
-                <div class="terms_condition-text">
-                  <h3>Unenforceable provisions :</h3>
-                  <p>
-                    If any provision of this website disclaimer is, or is found
-                    to be, unenforceable under applicable law, that will not
-                    affect the enforceability of the other provisions of this
-                    website disclaimer.
-                  </p>
-                </div>
-
-                <div class="terms_condition-text">
-                  <h3>Links :</h3>
-                  <p>
-                    Responsibility for the content of external links (to web
-                    pages of third parties) lies solely with the operators of
-                    the linked pages.
-                  </p>
-                </div>
-
-                <div class="terms_condition-text">
-                  <h3>Modifications:</h3>
-                  <p>
-                    Elaenia.com may revise these terms of use for its website at
-                    any time without notice. By using this web site you are
-                    agreeing to be bound by the then current version of these
-                    terms of service.
-                  </p>
-                </div>
-
-                <div class="terms_condition-text">
-                  <h3>Breaches of these terms and conditions:</h3>
-                  <ul>
-                    <li>
-                      <i class="bi bi-circle-fill"></i>
-                      <p>
-                        Elaenia.com reserves the rights under these terms and
-                        conditions to take action if you breach these terms and
-                        conditions in any way.
-                      </p>
-                    </li>
-                    <li>
-                      <i class="bi bi-circle-fill"></i>
-                      <p>
-                        Elaenia.com may take such action as seems appropriate to
-                        deal with the breach, including suspending your access
-                        to the website, suspending your earnings made trough
-                        Elaenia.com,prohibiting you from accessing the website,
-                        or bringing court proceedings against you.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
+      <div class="ticket-box section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="ticket-box-content">
+                <h3>Can't find what you're looking for?</h3>
+                <p>Let us help you!</p>
+                <a href="#" class="btn btn-dark">Submit Ticket</a>
               </div>
             </div>
           </div>
@@ -306,10 +279,10 @@
               <div class="bottom-widget">
                 <h4 class="widget-title">Company</h4>
                 <ul>
-                  <li ><a href="about.html" class="yellowText">About</a></li>
-                  <li class="yellowText"><a href="career.html" class="yellowText">Career</a></li>
+                  <li ><a href="about.php" class="yellowText">About</a></li>
+                  <li class="yellowText"><a href="career.php" class="yellowText">Career</a></li>
                   <li class="yellowText"><a href="#" class="yellowText">Affiliate</a></li>
-                  <li class="yellowText"><a href="team.html" class="yellowText">Our Team</a></li>
+                  <li class="yellowText"><a href="team.php" class="yellowText">Our Team</a></li>
                 </ul>
               </div>
             </div>
@@ -317,8 +290,8 @@
               <div class="bottom-widget">
                 <h4 class="widget-title">Support</h4>
                 <ul>
-                  <li class="yellowText"><a href="contact.html" class="yellowText">Contact us</a></li>
-                  <li class="yellowText"><a href="faq.html"class="yellowText">FAQ</a></li>
+                  <li class="yellowText"><a href="contact.php" class="yellowText">Contact us</a></li>
+                  <li class="yellowText"><a href="faq.php" class="yellowText">FAQ</a></li>
                   <li class="yellowText"><a href="blogg.html" class="yellowText">Blog</a></li>
                   <li class="yellowText"><a href="helpdesk.html"class="yellowText">Helpdesk</a></li>
                 </ul>
