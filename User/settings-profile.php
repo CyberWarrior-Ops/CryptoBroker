@@ -37,11 +37,63 @@ if($result){
     $mail = $row['mail'];
     $birthDate = $row['birthDate'];
     $PermanentAddress = $row['PermanentAddress'];
-    $PresentAddress = $row['PresentAddress'];
+    $PresentAddress = $row['PresentAdress'];
     $city = $row['city'];
     $ZipCode = $row['ZipCode'];
     $Country = $row['Country'];
 }
+
+function update(){
+    global $connection;
+    global $Name;
+    global $mail;
+    global $birthDate;
+    global $PermanentAddress;
+    global $PresentAddress;
+    global $city;
+    global $ZipCode;
+    global $Country;
+    global $find;
+
+    $Name = $_POST['Name'];
+    $birthDate = $_POST['birthDate'];
+    $PermanentAddress = $_POST['PermanentAddress'];
+    $PresentAddress = $_POST['PresentAdress'];
+    $city = $_POST['city'];
+    $ZipCode = $_POST['ZipCode'];
+    $Country = $_POST['Country'];
+
+    $update = "UPDATE UserInfo SET Name = '$Name', birthDate = '$birthDate', PermanentAddress = '$PermanentAddress', city = '$city', ZipCode = '$ZipCode', Country = '$Country' WHERE mail = '$find'";
+
+    $result = mysqli_query($connection,$update);
+
+    if($result){
+        echo '
+            <script>
+                alert("Profile Updated Successfully");
+                window.location = "settings-profile.php";
+            </script>
+        ';
+    }
+    else{
+        echo '
+            <script>
+                alert("Profile Update Failed");
+                window.location = "settings-profile.php";
+            </script>
+        ';
+    }
+}
+
+
+if (isset($_POST['update_button'])) {
+    if (update($Name, $mail, $birthDate, $PermanentAddress, $PresentAddress, $city, $ZipCode, $Country)) {
+        echo 'Los datos han sido actualizados con éxito.';
+    } else {
+        echo 'Error al actualizar los datos.';
+    }
+}
+
 
 ?>
 
@@ -337,7 +389,7 @@ if($result){
                                   <input
                                     type="file"
                                     class="form-file-input"
-                                    id="customFile"
+                                    id="picture"
                                   />
                                   <label
                                     class="form-file-label"
@@ -371,6 +423,7 @@ if($result){
                             name="myform"
                             class="personal_validate"
                             novalidate="novalidate"
+                            method="POST"
                           >
                             <div class="row g-4">
                               <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -379,7 +432,7 @@ if($result){
                                   type="text"
                                   class="form-control"
                                   placeholder="<?php echo $Name; ?>"
-                                  name="fullname"
+                                  name="Name"
                                 />
                               </div>
                               <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -390,7 +443,7 @@ if($result){
                                   placeholder="<?php echo $birthDate; ?>"
                                   id="datepicker"
                                   autocomplete="off"
-                                  name="dob"
+                                  name="birthDate"
                                 />
                               </div>
                               <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -401,7 +454,7 @@ if($result){
                                   type="text"
                                   class="form-control"
                                   placeholder="<?php echo $PresentAddress; ?>"
-                                  name="presentaddress"
+                                  name="PresentAdress"
                                 />
                               </div>
                               <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -412,7 +465,7 @@ if($result){
                                   type="text"
                                   class="form-control"
                                   placeholder="123, Central Square, Brooklyn"
-                                  name="permanentaddress"
+                                  name="PermanentAddress"
                                 />
                               </div>
                               <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -430,12 +483,12 @@ if($result){
                                   type="text"
                                   class="form-control"
                                   placeholder="<?php echo $ZipCode; ?>"
-                                  name="postal"
+                                  name="ZipCode"
                                 />
                               </div>
                               <div class="col-xxl-6 col-xl-6 col-lg-6">
                                 <label class="form-label">Country</label>
-                                <select class="form-select" name="country">
+                                <select class="form-select" name="Country">
                                   <option value="<?php echo $Country?>"><?php echo $Country?></option>
                                   <option value="Afghanistan">
                                     Afghanistan
@@ -867,6 +920,7 @@ if($result){
                               <div class="col-12">
                                 <button
                                   class="btn btn-success pl-5 pr-5 waves-effect"
+                                    type="submit" name="update_button"
                                 >
                                   Save
                                 </button>

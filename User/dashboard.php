@@ -32,6 +32,8 @@ if($result){
     $BTW = number_format($row['Bitcoin'], 6, '.', '');
     $LTW = number_format($row['LiteCoin'], 6, '.', '');
 }
+
+
 ?>
 
 
