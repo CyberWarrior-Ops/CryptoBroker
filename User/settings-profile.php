@@ -1,3 +1,51 @@
+<?php
+
+session_start();
+
+$connection = mysqli_connect("localhost","root","","Cripto");
+
+if(!isset($_SESSION['email'])){
+    echo '
+        <script>
+            alert("You must login first");
+            window.location = "../login/signin.php";
+        </script>
+    ';
+    session_destroy();
+    die();
+}
+
+$ID = "";
+$Name = "";
+$mail = "";
+$birthDate = "";
+$PermanentAddress = "";
+$PresentAddress = "";
+$city = "";
+$ZipCode = "";
+$Country = "";
+$find = $_SESSION['email'];
+
+$GetData = "SELECT ID, Name,mail, birthDate, PermanentAddress, PresentAdress, city, ZipCode, Country from UserInfo where mail = '$find'";
+
+$result = mysqli_query($connection,$GetData);
+
+if($result){
+    $row = mysqli_fetch_assoc($result);
+    $ID = $row['ID'];
+    $Name = $row['Name'];
+    $mail = $row['mail'];
+    $birthDate = $row['birthDate'];
+    $PermanentAddress = $row['PermanentAddress'];
+    $PresentAddress = $row['PresentAddress'];
+    $city = $row['city'];
+    $ZipCode = $row['ZipCode'];
+    $Country = $row['Country'];
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -135,8 +183,8 @@
                             ><img src="../images/profile/2.png" alt=""
                           /></span>
                           <div class="user-info">
-                            <h5>Jannatul Maowa</h5>
-                            <span>Tendex.inc@gmail.com</span>
+                            <h5><?php echo $Name?></h5>
+                            <span><?php echo $mail?></span>
                           </div>
                         </div>
                       </div>
@@ -274,14 +322,6 @@
                           <form action="#">
                             <div class="row g-3">
                               <div class="col-xxl-12">
-                                <label class="form-label">Your Name</label>
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  placeholder="Name"
-                                />
-                              </div>
-                              <div class="col-xxl-12">
                                 <div class="d-flex align-items-center">
                                   <img
                                     class="me-3 rounded-circle me-0 me-sm-3"
@@ -290,10 +330,6 @@
                                     height="55"
                                     alt=""
                                   />
-                                  <div class="media-body">
-                                    <h4 class="mb-0">Jannatul Maowa</h4>
-                                    <p class="mb-0">Max file size is 20mb</p>
-                                  </div>
                                 </div>
                               </div>
                               <div class="col-xxl-12">
@@ -324,44 +360,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xxl-6 col-xl-6 col-lg-6">
-                      <div class="card">
-                        <div class="card-header">
-                          <h4 class="card-title">User Profile</h4>
-                        </div>
-                        <div class="card-body">
-                          <form action="#">
-                            <div class="row g-3">
-                              <div class="col-xxl-12">
-                                <label class="form-label">New Email</label>
-                                <input
-                                  type="email"
-                                  class="form-control"
-                                  placeholder="Email"
-                                />
-                              </div>
-                              <div class="col-xxl-12">
-                                <label class="form-label">New Password</label>
-                                <input
-                                  type="password"
-                                  class="form-control"
-                                  placeholder="**********"
-                                />
-                                <small class="mt-2 mb-0 d-block"
-                                  >Enable two factor authencation on the
-                                  security page
-                                </small>
-                              </div>
-                              <div class="col-12">
-                                <button class="btn btn-success waves-effect">
-                                  Save
-                                </button>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
+
                     <div class="col-xxl-12">
                       <div class="card">
                         <div class="card-header">
@@ -379,25 +378,16 @@
                                 <input
                                   type="text"
                                   class="form-control"
-                                  placeholder="Jannatul Maowa"
+                                  placeholder="<?php echo $Name; ?>"
                                   name="fullname"
-                                />
-                              </div>
-                              <div class="col-xxl-6 col-xl-6 col-lg-6">
-                                <label class="form-label">Email</label>
-                                <input
-                                  type="email"
-                                  class="form-control"
-                                  placeholder="Hello@example.com"
-                                  name="email"
                                 />
                               </div>
                               <div class="col-xxl-6 col-xl-6 col-lg-6">
                                 <label class="form-label">Date of birth</label>
                                 <input
-                                  type="text"
+                                  type="date"
                                   class="form-control hasDatepicker"
-                                  placeholder="10-10-2020"
+                                  placeholder="<?php echo $birthDate; ?>"
                                   id="datepicker"
                                   autocomplete="off"
                                   name="dob"
@@ -410,7 +400,7 @@
                                 <input
                                   type="text"
                                   class="form-control"
-                                  placeholder="56, Old Street, Brooklyn"
+                                  placeholder="<?php echo $PresentAddress; ?>"
                                   name="presentaddress"
                                 />
                               </div>
@@ -430,7 +420,7 @@
                                 <input
                                   type="text"
                                   class="form-control"
-                                  placeholder="New York"
+                                  placeholder="<?php echo $PermanentAddress; ?>"
                                   name="city"
                                 />
                               </div>
@@ -439,14 +429,14 @@
                                 <input
                                   type="text"
                                   class="form-control"
-                                  placeholder="25481"
+                                  placeholder="<?php echo $ZipCode; ?>"
                                   name="postal"
                                 />
                               </div>
                               <div class="col-xxl-6 col-xl-6 col-lg-6">
                                 <label class="form-label">Country</label>
                                 <select class="form-select" name="country">
-                                  <option value="">Select</option>
+                                  <option value="<?php echo $Country?>"><?php echo $Country?></option>
                                   <option value="Afghanistan">
                                     Afghanistan
                                   </option>

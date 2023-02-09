@@ -195,7 +195,7 @@ if($result){
                       <a href="../Wallet/wallet.php" class="dropdown-item">
                         <i class="bi bi-wallet"></i>Wallet
                       </a>
-                      <a href="../settings-profile.html" class="dropdown-item">
+                      <a href="../User/settings-profile.php" class="dropdown-item">
                         <i class="bi bi-gear"></i> Setting
                       </a>
                       <a href="../settings-activity.html" class="dropdown-item">
@@ -226,7 +226,7 @@ if($result){
           <ul>
             <li>
               <a
-                href="dashboard.html"
+                href="#"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Home"
@@ -241,7 +241,7 @@ if($result){
                 data-placement="right"
                 title="Trade"
               >
-                <span><i class="bi bi-globe2"></i></span>
+                <span><i class="bi bi-cash-stack"></i></span>
               </a>
             </li>
             <li>
