@@ -13,7 +13,7 @@ if(!isset($_SESSION['email'])){
     die();
 }
 
-$getID= 'SELECT ID FROM users WHERE email = "'.$_SESSION['email'].'"';
+$getID= 'SELECT ID FROM login WHERE email = "'.$_SESSION['email'].'"';
 $getIDResult = mysqli_query($connection,$getID);
 if (mysqli_num_rows($getIDResult) > 0) {
     while($row = mysqli_fetch_assoc($getIDResult)) {
@@ -23,53 +23,29 @@ if (mysqli_num_rows($getIDResult) > 0) {
     echo "0 results";
 }
 
-
 $ID = $_SESSION['id'];
-//Bitcoin get last value
-
-$BitcoinActualData = "Select value from Bitcoin Order by ID desc limit 1";
-
-$BitcoinActualDataResult = mysqli_query($connection,$BitcoinActualData);
-if (mysqli_num_rows($BitcoinActualDataResult) > 0) {
-    while($row = mysqli_fetch_assoc($BitcoinActualDataResult)) {
-        $BitcoinActualDataValue = $row["value"];
+global $lastValue;
+global $criptoWallet;
+//Etherium get last value
+$btc = "SELECT * FROM Etherium ORDER BY ID DESC LIMIT 1";
+$resultbtc = mysqli_query($connection, $btc);
+if (mysqli_num_rows($resultbtc) > 0) {
+    while($row = mysqli_fetch_assoc($resultbtc)) {
+        $lastValue = $row["value"];
     }
 } else {
     echo "0 results";
 }
 
-function Buy(){
-    global $BitcoinActualDataValue;
-    global $connection;
-    global $ID;
-
-    $ID = $_SESSION['id'];
-    $buy = $_POST['buy'];
-
-    $value = $buy / $BitcoinActualDataValue;
-
-    $insert = "UPDATE BitcoinWallet SET ammount='$value' where ID = $ID";
-    $result = mysqli_query($connection,$insert);
-
-    if($result){
-        echo '
-            <script>
-                alert("Buy Succesfull");
-                window.location = "tradebtc.php";
-            </script>
-        ';
-    }else{
-        echo '
-            <script>
-                alert("Buy Failed");
-                window.location = "tradebtc.php";
-            </script>
-        ';
+//Criptos on wallet
+$cripto = "SELECT * FROM EtheriumWallet WHERE ID = '$ID'";
+$resultwallet = mysqli_query($connection, $cripto);
+if (mysqli_num_rows($resultwallet) > 0) {
+    while($row = mysqli_fetch_assoc($resultwallet)) {
+        $criptoWallet = $row["ammount"];
     }
-}
-
-if (isset($_POST['BuyCripto'])) {
-    Buy();
+} else {
+    echo "0 results";
 }
 
 ?>
@@ -82,10 +58,10 @@ if (isset($_POST['BuyCripto'])) {
     <title>CryptoBroker</title>
     <!-- Favicon icon -->
     <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="../images/favicon.png"
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="../images/favicon.png"
     />
     <!-- Custom Stylesheet -->
 
@@ -111,9 +87,9 @@ if (isset($_POST['BuyCripto'])) {
                                 <form action="#">
                                     <div class="input-group">
                                         <input
-                                            type="text"
-                                            class="form-control"
-                                            placeholder="Search Here"
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Search Here"
                                         />
                                         <span class="input-group-text"
                                         ><i class="icofont-search"></i
@@ -135,7 +111,7 @@ if (isset($_POST['BuyCripto'])) {
                                     <span><i class="bi bi-bell"></i></span>
                                 </div>
                                 <div
-                                    class="
+                                        class="
                         dropdown-menu dropdown-menu-right
                         notification-list
                       "
@@ -210,8 +186,8 @@ if (isset($_POST['BuyCripto'])) {
                           ><img src="../images/profile/2.png" alt=""
                               /></span>
                                             <div class="user-info">
-                                                <h5>Jannatul Maowa</h5>
-                                                <span>Tendex.inc@gmail.com</span>
+                                                <h5></h5>
+                                                <span>  </span>
                                             </div>
                                         </div>
                                     </div>
@@ -263,51 +239,51 @@ if (isset($_POST['BuyCripto'])) {
             <ul>
                 <li>
                     <a
-                        href="../User/dashboard.php"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Home"
+                            href="../User/dashboard.php"
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title="Home"
                     >
                         <span><i class="bi bi-house"></i></span>
                     </a>
                 </li>
                 <li>
                     <a
-                        href="trade.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Trade"
+                            href="trade.html"
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title="Trade"
                     >
                         <span><i class="bi bi-cash-stack"></i></span>
                     </a>
                 </li>
                 <li>
                     <a
-                        href="wallet.php"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Wallet"
+                            href="wallet.php"
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title="Wallet"
                     >
                         <span><i class="bi bi-wallet2"></i></span>
                     </a>
                 </li>
                 <li>
                     <a
-                        href="settings-profile.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Settings"
-                        id="settings"
+                            href="settings-profile.html"
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title="Settings"
+                            id="settings"
                     >
                         <span><i class="bi bi-gear"></i></span>
                     </a>
                 </li>
                 <li class="logout">
                     <a
-                        href="../login/signin.php"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Signout"
+                            href="../login/signin.php"
+                            data-toggle="tooltip"
+                            data-placement="right"
+                            title="Signout"
                     >
                         <span><i class="bi bi-power"></i></span>
                     </a>
@@ -328,23 +304,22 @@ if (isset($_POST['BuyCripto'])) {
                         </div>
                         <div class="card-body">
                             <form
-                                name="myform"
-                                class="currency_validate trade-form row g-3"
-                                action="buybtc.php"
-                                method="post"
+                                    name="myform"
+                                    class="currency_validate trade-form row g-3"
+                                    action="buyetc.php"
+                                    method="post"
                             >
                                 <div class="col-12">
                                     <label class="form-label">Buy</label>
                                     <div class="input-group">
                                         <select class="form-control" name="buy_currency">
                                             <option value="USD">USD</option>
-                                            <option value="Euro">Euro</option>
                                         </select>
                                         <input
-                                            type="number"
-                                            class="form-control"
-                                            placeholder="0.0214 BTC"
-                                            name="buy"
+                                                type="number"
+                                                class="form-control"
+                                                placeholder="$ 10"
+                                                name="buy"
                                         />
                                     </div>
                                 </div>
@@ -361,57 +336,53 @@ if (isset($_POST['BuyCripto'])) {
                         </div>
                         <div class="card-body">
                             <form
-                                name="myform"
-                                class="currency_validate trade-form row g-3"
+                                    name="myform"
+                                    class="currency_validate trade-form row g-3"
                             >
                                 <div class="col-12">
                                     <label class="form-label">Pay</label>
                                     <div class="input-group">
                                         <select class="form-control" name="method">
-                                            <option value="bank">USD</option>
+                                            <option value="bank">ETH</option>
                                         </select>
                                         <input
-                                            type="text"
-                                            name="currency_amount"
-                                            class="form-control"
-                                            placeholder="0.0214 BTC"
-                                            name="buy"
+                                                type="text"
+                                                name="currency_amount"
+                                                class="form-control"
+                                                placeholder="0.12 ETH"
+                                                name="buy"
                                         />
                                     </div>
                                 </div>
-
-                                <div class="col-12">
-                                    <label class="form-label">Receive</label>
-                                    <div class="input-group">
-                                        <select class="form-control" name="method">
-                                            <option value="BTC">BTC</option>
-                                            <option value="ETH">ETH</option>
-                                            <option value="LTC">LiteCoin</option>
-                                        </select>
-                                        <input
-                                            type="text"
-                                            name="currency_amount"
-                                            class="form-control"
-                                            placeholder="0.0214 BTC"
-                                        />
-                                    </div>
-                                </div>
-
                                 <p class="mb-0">
-                                    1 USD ~ 0.000088 BTC
+                                    1 ETH ~ <?php
+                                        echo number_format($lastValue,2);
+                                    ?> USD
                                     <a href="#">Expected rate <br />No extra fees</a>
                                 </p>
 
                                 <button
-                                    type="button"
-                                    class="btn btn-primary btn-block"
-                                    data-toggle="modal"
-                                    data-target="#SellModal"
+                                        type="button"
+                                        class="btn btn-primary btn-block"
+                                        data-toggle="modal"
+                                        data-target="#SellModal"
                                 >
                                     Sell Now
                                 </button>
                             </form>
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                    <div class="wallet-widget card">
+                        <h5>Available Balance</h5>
+                        <h2><span class="text-success"><?php
+                                echo $criptoWallet;
+                                ?></span> <sub>ETH</sub></h2>
+                        <p>= <?php
+                            echo number_format(floatval($criptoWallet) * floatval($lastValue),2);
+                            ?><sub>USD</sub></p>
                     </div>
                 </div>
 

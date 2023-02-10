@@ -249,7 +249,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
             </li>
             <li>
               <a
-                href="trade.html"
+                href="tradebtc.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Trade"
@@ -314,12 +314,11 @@ if (mysqli_num_rows($resultwallet) > 0) {
                             <div class="input-group">
                                 <select class="form-control" name="buy_currency">
                                     <option value="USD">USD</option>
-                                    <option value="Euro">Euro</option>
                                 </select>
                                 <input
                                         type="number"
                                         class="form-control"
-                                        placeholder="0.0214 BTC"
+                                        placeholder="$ 10"
                                         name="buy"
                                 />
                             </div>
@@ -344,7 +343,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
                       <label class="form-label">Pay</label>
                       <div class="input-group">
                         <select class="form-control" name="method">
-                          <option value="bank">USD</option>
+                          <option value="bank">BTC</option>
                         </select>
                         <input
                           type="text"
@@ -356,25 +355,9 @@ if (mysqli_num_rows($resultwallet) > 0) {
                       </div>
                     </div>
 
-                    <div class="col-12">
-                      <label class="form-label">Receive</label>
-                      <div class="input-group">
-                        <select class="form-control" name="method">
-                          <option value="BTC">BTC</option>
-                          <option value="ETH">ETH</option>
-                            <option value="LTC">LiteCoin</option>
-                        </select>
-                        <input
-                          type="text"
-                          name="currency_amount"
-                          class="form-control"
-                          placeholder="0.0214 BTC"
-                        />
-                      </div>
-                    </div>
-
                     <p class="mb-0">
-                      1 USD ~ 0.000088 BTC
+                      1 BTC ~ <?php
+                        echo number_format($lastValue,2);?> USD
                       <a href="#">Expected rate <br />No extra fees</a>
                     </p>
 
