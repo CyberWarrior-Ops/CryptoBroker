@@ -13,7 +13,7 @@ if(!isset($_SESSION['email'])){
     die();
 }
 
-$getID= 'SELECT ID FROM users WHERE email = "'.$_SESSION['email'].'"';
+$getID= 'SELECT ID FROM login WHERE email = "'.$_SESSION['email'].'"';
 $getIDResult = mysqli_query($connection,$getID);
 if (mysqli_num_rows($getIDResult) > 0) {
     while($row = mysqli_fetch_assoc($getIDResult)) {
@@ -23,53 +23,29 @@ if (mysqli_num_rows($getIDResult) > 0) {
     echo "0 results";
 }
 
-
 $ID = $_SESSION['id'];
+global $lastValue;
+global $criptoWallet;
 //Bitcoin get last value
-
-$BitcoinActualData = "Select value from Bitcoin Order by ID desc limit 1";
-
-$BitcoinActualDataResult = mysqli_query($connection,$BitcoinActualData);
-if (mysqli_num_rows($BitcoinActualDataResult) > 0) {
-    while($row = mysqli_fetch_assoc($BitcoinActualDataResult)) {
-        $BitcoinActualDataValue = $row["value"];
+$btc = "SELECT * FROM Bitcoin ORDER BY ID DESC LIMIT 1";
+$resultbtc = mysqli_query($connection, $btc);
+if (mysqli_num_rows($resultbtc) > 0) {
+    while($row = mysqli_fetch_assoc($resultbtc)) {
+        $lastValue = $row["value"];
     }
 } else {
     echo "0 results";
 }
 
-function Buy(){
-    global $BitcoinActualDataValue;
-    global $connection;
-    global $ID;
-
-    $ID = $_SESSION['id'];
-    $buy = $_POST['buy'];
-
-    $value = $buy / $BitcoinActualDataValue;
-
-    $insert = "UPDATE BitcoinWallet SET ammount='$value' where ID = $ID";
-    $result = mysqli_query($connection,$insert);
-
-    if($result){
-        echo '
-            <script>
-                alert("Buy Succesfull");
-                window.location = "tradebtc.php";
-            </script>
-        ';
-    }else{
-        echo '
-            <script>
-                alert("Buy Failed");
-                window.location = "tradebtc.php";
-            </script>
-        ';
+//Criptos on wallet
+$cripto = "SELECT * FROM BitcoinWallet WHERE ID = '$ID'";
+$resultwallet = mysqli_query($connection, $cripto);
+if (mysqli_num_rows($resultwallet) > 0) {
+    while($row = mysqli_fetch_assoc($resultwallet)) {
+        $criptoWallet = $row["ammount"];
     }
-}
-
-if (isset($_POST['BuyCripto'])) {
-    Buy();
+} else {
+    echo "0 results";
 }
 
 ?>
@@ -414,6 +390,18 @@ if (isset($_POST['BuyCripto'])) {
                 </div>
               </div>
             </div>
+
+              <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                  <div class="wallet-widget card">
+                      <h5>Available Balance</h5>
+                      <h2><span class="text-success"><?php
+                              echo $criptoWallet;
+                              ?></span> <sub>BTC</sub></h2>
+                      <p>= <?php
+                          echo number_format(floatval($criptoWallet) * floatval($lastValue),2);
+                          ?><sub>USD</sub></p>
+                  </div>
+              </div>
 
 
 
