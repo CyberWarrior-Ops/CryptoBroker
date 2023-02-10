@@ -1,3 +1,78 @@
+<?php
+session_start();
+
+$connection = mysqli_connect("localhost","root","","Cripto");
+if(!isset($_SESSION['email'])){
+    echo '
+        <script>
+            alert("You must login first");
+            window.location = "../login/signin.php";
+        </script>
+    ';
+    session_destroy();
+    die();
+}
+
+$getID= 'SELECT ID FROM users WHERE email = "'.$_SESSION['email'].'"';
+$getIDResult = mysqli_query($connection,$getID);
+if (mysqli_num_rows($getIDResult) > 0) {
+    while($row = mysqli_fetch_assoc($getIDResult)) {
+        $_SESSION['id'] = $row["ID"];
+    }
+} else {
+    echo "0 results";
+}
+
+
+$ID = $_SESSION['id'];
+//Bitcoin get last value
+
+$BitcoinActualData = "Select value from Bitcoin Order by ID desc limit 1";
+
+$BitcoinActualDataResult = mysqli_query($connection,$BitcoinActualData);
+if (mysqli_num_rows($BitcoinActualDataResult) > 0) {
+    while($row = mysqli_fetch_assoc($BitcoinActualDataResult)) {
+        $BitcoinActualDataValue = $row["value"];
+    }
+} else {
+    echo "0 results";
+}
+
+function Buy(){
+    global $BitcoinActualDataValue;
+    global $connection;
+    global $ID;
+
+    $ID = $_SESSION['id'];
+    $buy = $_POST['buy'];
+
+    $value = $buy / $BitcoinActualDataValue;
+
+    $insert = "UPDATE BitcoinWallet SET ammount='$value' where ID = $ID";
+    $result = mysqli_query($connection,$insert);
+
+    if($result){
+        echo '
+            <script>
+                alert("Buy Succesfull");
+                window.location = "./trade.php";
+            </script>
+        ';
+    }else{
+        echo '
+            <script>
+                alert("Buy Failed");
+                window.location = "./trade.php";
+            </script>
+        ';
+    }
+}
+
+if (isset($_POST['BuyCripto'])) {
+    Buy();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -252,58 +327,30 @@
                   <h4 class="card-title">Buy</h4>
                 </div>
                 <div class="card-body">
-                  <form
-                    name="myform"
-                    class="currency_validate trade-form row g-3"
-                  >
-                    <div class="col-12">
-                      <label class="form-label">Pay</label>
-                      <div class="input-group">
-                        <select class="form-control" name="method">
-                          <option value="bank">USD</option>
-                          <option value="master">Euro</option>
-                        </select>
-                        <input
-                          type="text"
-                          name="currency_amount"
-                          class="form-control"
-                          placeholder="0.0214 BTC"
-                        />
-                      </div>
-                    </div>
-
-                    <div class="col-12">
-                      <label class="form-label">Receive</label>
-                      <div class="input-group">
-                        <select class="form-control" name="method">
-                          <option value="bank">BTC</option>
-                          <option value="master">ETH</option>
-                        </select>
-                        <input
-                          type="text"
-                          name="currency_amount"
-                          class="form-control"
-                          placeholder="0.0214 BTC"
-                        />
-                      </div>
-                    </div>
-
-                    <p class="mb-0">
-                      1 USD ~ 0.000088 BTC
-                      <a href="#">Expected rate <br />No extra fees</a>
-                    </p>
-
-                    <!-- <button type="submit" name="submit" class="btn btn-success btn-block">Exchange
-                                        Now</button> -->
-                    <button
-                      type="button"
-                      class="btn btn-primary btn-block"
-                      data-toggle="modal"
-                      data-target="#BuyModal"
+                    <form
+                            name="myform"
+                            class="currency_validate trade-form row g-3"
+                            action="buy.php"
+                            method="post"
                     >
-                      Buy Now
-                    </button>
-                  </form>
+                        <div class="col-12">
+                            <label class="form-label">Buy</label>
+                            <div class="input-group">
+                                <select class="form-control" name="buy_currency">
+                                    <option value="USD">USD</option>
+                                    <option value="Euro">Euro</option>
+                                </select>
+                                <input
+                                        type="number"
+                                        class="form-control"
+                                        placeholder="0.0214 BTC"
+                                        name="buy"
+                                />
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" name="BuyCripto">Buy Now</button>
+
+                    </form>
                 </div>
               </div>
             </div>
@@ -328,6 +375,7 @@
                           name="currency_amount"
                           class="form-control"
                           placeholder="0.0214 BTC"
+                          name="buy"
                         />
                       </div>
                     </div>
