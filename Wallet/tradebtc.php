@@ -55,14 +55,14 @@ function Buy(){
         echo '
             <script>
                 alert("Buy Succesfull");
-                window.location = "./trade.php";
+                window.location = "tradebtc.php";
             </script>
         ';
     }else{
         echo '
             <script>
                 alert("Buy Failed");
-                window.location = "./trade.php";
+                window.location = "tradebtc.php";
             </script>
         ';
     }
@@ -330,7 +330,7 @@ if (isset($_POST['BuyCripto'])) {
                     <form
                             name="myform"
                             class="currency_validate trade-form row g-3"
-                            action="buy.php"
+                            action="buybtc.php"
                             method="post"
                     >
                         <div class="col-12">

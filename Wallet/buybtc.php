@@ -66,14 +66,14 @@ function Buy(){
         echo '
             <script>
                 alert("Buy Succesfull");
-                window.location = "./trade.php";
+                window.location = "tradebtc.php";
             </script>
         ';
     }else{
         echo '
             <script>
                 alert("Buy Failed ");
-                window.location = "./trade.php";
+                window.location = "tradebtc.php";
             </script>
         ';
     }

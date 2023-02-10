@@ -198,7 +198,7 @@
             </li>
             <li>
               <a
-                href="../Wallet/trade.php"
+                href="../Wallet/tradebtc.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Trade"
