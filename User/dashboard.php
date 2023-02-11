@@ -33,6 +33,27 @@ if($result){
     $LTW = number_format($row['LiteCoin'], 6, '.', '');
 }
 
+$GetActualValue= "select value from Bitcoin order by ID desc limit 1";
+
+$resultBtc = mysqli_query($connection,$GetActualValue);
+if ($resultBtc) {
+    $row = mysqli_fetch_assoc($resultBtc);
+    $BTC = number_format($row['value'], 6, '.', '');
+}
+
+$resultEtc = mysqli_query($connection,"select value from Etherium order by ID desc limit 1");
+if ($resultEtc) {
+    $row = mysqli_fetch_assoc($resultEtc);
+    $ETC = number_format($row['value'], 6, '.', '');
+}
+
+$resultLtc = mysqli_query($connection,"select value from LiteCoin order by ID desc limit 1");
+if ($resultLtc) {
+    $row = mysqli_fetch_assoc($resultLtc);
+    $LTC = number_format($row['value'], 6, '.', '');
+}
+
+$Total = number_format(($BTW * $BTC) + ($LTW * $LTC) + ($EtW * $ETC),2,'.','');
 
 ?>
 
@@ -498,7 +519,7 @@ if($result){
                               <div class="col-xxl-6 col-xl-6 col-lg-6">
                                   <div class="balance-chart">
                                       <div id="balance-chart"></div>
-                                      <h4>Total Balance = $ 5360</h4>
+                                      <h4>Total Balance = $ <?php echo $Total?></h4>
                                   </div>
                               </div>
                               <div class="col-xxl-6 col-xl-6 col-lg-6">
@@ -509,28 +530,28 @@ if($result){
                                               <span>Bitcoin</span>
                                           </div>
                                           <div class="text-end">
-                                              <h5>0.000242 BTC</h5>
-                                              <span>0.125 USD</span>
+                                              <h5><?php echo $BTW?> BTC</h5>
+                                              <span><?php echo number_format($BTC,2,'.',',')?> USD</span>
                                           </div>
                                       </li>
                                       <li>
                                           <div class="icon-title">
                                               <i class="cc USDT"></i>
-                                              <span>Tether</span>
+                                              <span>Ethereum</span>
                                           </div>
                                           <div class="text-end">
-                                              <h5>0.000242 USDT</h5>
-                                              <span>0.125 USD</span>
+                                              <h5><?php echo $EtW?> ETH</h5>
+                                              <span><?php echo number_format($ETC,2,'.',',')?> USD</span>
                                           </div>
                                       </li>
                                       <li>
                                           <div class="icon-title">
                                               <i class="cc XTZ"></i>
-                                              <span>Tezos</span>
+                                              <span>LiteCoin</span>
                                           </div>
                                           <div class="text-end">
-                                              <h5>0.000242 XTZ</h5>
-                                              <span>0.125 USD</span>
+                                              <h5><?php echo $LTW?> LTC</h5>
+                                              <span><?php echo number_format($LTC,2,'.',',')?> USD</span>
                                           </div>
                                       </li>
                                       <li>

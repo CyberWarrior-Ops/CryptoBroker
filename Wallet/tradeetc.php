@@ -27,7 +27,7 @@ $ID = $_SESSION['id'];
 global $lastValue;
 global $criptoWallet;
 //Bitcoin get last value
-$btc = "SELECT * FROM Bitcoin ORDER BY ID DESC LIMIT 1";
+$btc = "SELECT * FROM Etherium ORDER BY ID DESC LIMIT 1";
 $resultbtc = mysqli_query($connection, $btc);
 if (mysqli_num_rows($resultbtc) > 0) {
     while($row = mysqli_fetch_assoc($resultbtc)) {
@@ -38,7 +38,7 @@ if (mysqli_num_rows($resultbtc) > 0) {
 }
 
 //Criptos on wallet
-$cripto = "SELECT * FROM BitcoinWallet WHERE ID = '$ID'";
+$cripto = "SELECT * FROM EtheriumWallet WHERE ID = '$ID'";
 $resultwallet = mysqli_query($connection, $cripto);
 if (mysqli_num_rows($resultwallet) > 0) {
     while($row = mysqli_fetch_assoc($resultwallet)) {
