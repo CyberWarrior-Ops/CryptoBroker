@@ -26,8 +26,8 @@ if (mysqli_num_rows($getIDResult) > 0) {
 $ID = $_SESSION['id'];
 global $lastValue;
 global $criptoWallet;
-//Etherium get last value
-$btc = "SELECT * FROM Etherium ORDER BY ID DESC LIMIT 1";
+//Bitcoin get last value
+$btc = "SELECT * FROM Bitcoin ORDER BY ID DESC LIMIT 1";
 $resultbtc = mysqli_query($connection, $btc);
 if (mysqli_num_rows($resultbtc) > 0) {
     while($row = mysqli_fetch_assoc($resultbtc)) {
@@ -38,7 +38,7 @@ if (mysqli_num_rows($resultbtc) > 0) {
 }
 
 //Criptos on wallet
-$cripto = "SELECT * FROM EtheriumWallet WHERE ID = '$ID'";
+$cripto = "SELECT * FROM BitcoinWallet WHERE ID = '$ID'";
 $resultwallet = mysqli_query($connection, $cripto);
 if (mysqli_num_rows($resultwallet) > 0) {
     while($row = mysqli_fetch_assoc($resultwallet)) {
@@ -186,8 +186,8 @@ if (mysqli_num_rows($resultwallet) > 0) {
                           ><img src="../images/profile/2.png" alt=""
                               /></span>
                                             <div class="user-info">
-                                                <h5></h5>
-                                                <span>  </span>
+                                                <h5>Jannatul Maowa</h5>
+                                                <span>Tendex.inc@gmail.com</span>
                                             </div>
                                         </div>
                                     </div>
@@ -249,7 +249,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
                 </li>
                 <li>
                     <a
-                            href="trade.html"
+                            href="tradebtc.php"
                             data-toggle="tooltip"
                             data-placement="right"
                             title="Trade"
@@ -306,7 +306,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
                             <form
                                     name="myform"
                                     class="currency_validate trade-form row g-3"
-                                    action="buyetc.php"
+                                    action="buybtc.php"
                                     method="post"
                             >
                                 <div class="col-12">
@@ -324,7 +324,6 @@ if (mysqli_num_rows($resultwallet) > 0) {
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block" name="BuyCripto">Buy Now</button>
-
                             </form>
                         </div>
                     </div>
@@ -338,37 +337,32 @@ if (mysqli_num_rows($resultwallet) > 0) {
                             <form
                                     name="myform"
                                     class="currency_validate trade-form row g-3"
+                                    action="buybtc.php"
+                                    method="post"
                             >
                                 <div class="col-12">
                                     <label class="form-label">Pay</label>
                                     <div class="input-group">
                                         <select class="form-control" name="method">
-                                            <option value="bank">ETH</option>
+                                            <option value="bank">BTC</option>
                                         </select>
                                         <input
-                                                type="text"
-                                                name="currency_amount"
+                                                type="number"
+                                                name="sellval"
                                                 class="form-control"
-                                                placeholder="0.12 ETH"
-                                                name="buy"
+                                                placeholder="0.0214 BTC"
                                         />
                                     </div>
                                 </div>
+
                                 <p class="mb-0">
-                                    1 ETH ~ <?php
-                                        echo number_format($lastValue,2);
-                                    ?> USD
+                                    1 BTC ~ <?php
+                                    echo number_format($lastValue,2);?> USD
                                     <a href="#">Expected rate <br />No extra fees</a>
                                 </p>
 
-                                <button
-                                        type="button"
-                                        class="btn btn-primary btn-block"
-                                        data-toggle="modal"
-                                        data-target="#SellModal"
-                                >
-                                    Sell Now
-                                </button>
+                                <button type="submit" class="btn btn-primary btn-block" name="SellCripto">Sell Now</button>
+
                             </form>
                         </div>
                     </div>

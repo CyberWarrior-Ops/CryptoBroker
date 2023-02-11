@@ -12,6 +12,9 @@ if(!isset($_SESSION['email'])){
     session_destroy();
     die();
 }
+global $sell;
+$sell = $_POST['sellval'];
+
 
 $getID= 'SELECT ID FROM users WHERE email = "'.$_SESSION['email'].'"';
 $getIDResult = mysqli_query($connection,$getID);
@@ -79,6 +82,61 @@ function Buy(){
     }
 }
 
+function SellCt(){
+    global $connection;
+    global $ID;
+    $ID = $_SESSION['id'];
+    global $criptoWallet;
+    $sell = $_POST['sellval'];
+    global $newAmmount;
+
+    $newAmmount = floatval($criptoWallet) - floatval($sell);
+    $CheckWallet = "SELECT ammount FROM BitcoinWallet WHERE ID = '$ID'";
+    $result = mysqli_query($connection,$CheckWallet);
+    if (mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $criptoWallet = $row["ammount"];
+        }
+    } else {
+        echo "0 results";
+    }
+
+    if($criptoWallet - $sell<0){
+        echo '
+            <script>
+                alert("You dont have enough Criptos to sell");
+                window.location = "tradebtc.php";
+            </script>
+        ';
+}else{
+        $newAmmount = floatval($criptoWallet) - floatval($sell);
+        $newAmmount = number_format($newAmmount, 8, '.', '');
+        $insert = "UPDATE BitcoinWallet SET ammount='$newAmmount' where ID = '$ID'";
+        $result = mysqli_query($connection,$insert);
+        if (!$result) {
+            die("Query failed: " . mysqli_error($connection));
+        }
+
+
+        if(true){
+        echo '
+            <script>
+                var variablePHP = '. json_encode($newAmmount) .';
+                alert("Sell Succesfull. Valor de la variable: " + variablePHP);
+                window.location = "tradebtc.php";
+            </script>
+        ';
+    }else{
+        echo '
+            <script>
+                alert("Sell Failed ");
+                window.location = "tradebtc.php";
+            </script>
+        ';
+    }
+}
+}
+
 
 if (isset($_POST['BuyCripto'])) {
     try{
@@ -87,5 +145,18 @@ if (isset($_POST['BuyCripto'])) {
         echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
 }
+
+if (isset($_POST['SellCripto'])) {
+    if (isset($_POST['sellval'])) {
+        try{
+            SellCt();
+        } catch (Exception $e) {
+            echo 'Caught exception: ',  $e->getMessage(), "\n";
+        }
+    } else {
+        echo '<script>alert("No value sent");</script>';
+    }
+}
+
 
 ?>

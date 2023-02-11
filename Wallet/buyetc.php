@@ -12,6 +12,9 @@ if(!isset($_SESSION['email'])){
     session_destroy();
     die();
 }
+global $sell;
+$sell = $_POST['sellval'];
+
 
 $getID= 'SELECT ID FROM users WHERE email = "'.$_SESSION['email'].'"';
 $getIDResult = mysqli_query($connection,$getID);
@@ -25,7 +28,7 @@ if (mysqli_num_rows($getIDResult) > 0) {
 
 
 $ID = $_SESSION['id'];
-//Eth get last value
+//Bitcoin get last value
 
 $lastRecord = "SELECT * FROM Etherium ORDER BY ID DESC LIMIT 1";
 $resultbtc = mysqli_query($connection, $lastRecord);
@@ -73,9 +76,64 @@ function Buy(){
         echo '
             <script>
                 alert("Buy Failed ");
-                window.location = "tradebtc.php";
+                window.location = "tradeetc.php";
             </script>
         ';
+    }
+}
+
+function SellCt(){
+    global $connection;
+    global $ID;
+    $ID = $_SESSION['id'];
+    global $criptoWallet;
+    $sell = $_POST['sellval'];
+    global $newAmmount;
+
+    $newAmmount = floatval($criptoWallet) - floatval($sell);
+    $CheckWallet = "SELECT ammount FROM EtheriumWallet WHERE ID = '$ID'";
+    $result = mysqli_query($connection,$CheckWallet);
+    if (mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $criptoWallet = $row["ammount"];
+        }
+    } else {
+        echo "0 results";
+    }
+
+    if($criptoWallet - $sell<0){
+        echo '
+            <script>
+                alert("You dont have enough Criptos to sell");
+                window.location = "tradeetc.php";
+            </script>
+        ';
+    }else{
+        $newAmmount = floatval($criptoWallet) - floatval($sell);
+        $newAmmount = number_format($newAmmount, 8, '.', '');
+        $insert = "UPDATE EtheriumWallet SET ammount='$newAmmount' where ID = '$ID'";
+        $result = mysqli_query($connection,$insert);
+        if (!$result) {
+            die("Query failed: " . mysqli_error($connection));
+        }
+
+
+        if(true){
+            echo '
+            <script>
+                var variablePHP = '. json_encode($newAmmount) .';
+                alert("Sell Succesfull. Valor de la variable: " + variablePHP);
+                window.location = "tradeetc.php";
+            </script>
+        ';
+        }else{
+            echo '
+            <script>
+                alert("Sell Failed ");
+                window.location = "tradeetc.php";
+            </script>
+        ';
+        }
     }
 }
 
@@ -87,5 +145,18 @@ if (isset($_POST['BuyCripto'])) {
         echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
 }
+
+if (isset($_POST['SellCripto'])) {
+    if (isset($_POST['sellval'])) {
+        try{
+            SellCt();
+        } catch (Exception $e) {
+            echo 'Caught exception: ',  $e->getMessage(), "\n";
+        }
+    } else {
+        echo '<script>alert("No value sent");</script>';
+    }
+}
+
 
 ?>

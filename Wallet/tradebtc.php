@@ -324,7 +324,6 @@ if (mysqli_num_rows($resultwallet) > 0) {
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block" name="BuyCripto">Buy Now</button>
-
                     </form>
                 </div>
               </div>
@@ -335,41 +334,36 @@ if (mysqli_num_rows($resultwallet) > 0) {
                   <h4 class="card-title">Sell</h4>
                 </div>
                 <div class="card-body">
-                  <form
-                    name="myform"
-                    class="currency_validate trade-form row g-3"
-                  >
-                    <div class="col-12">
-                      <label class="form-label">Pay</label>
-                      <div class="input-group">
-                        <select class="form-control" name="method">
-                          <option value="bank">BTC</option>
-                        </select>
-                        <input
-                          type="text"
-                          name="currency_amount"
-                          class="form-control"
-                          placeholder="0.0214 BTC"
-                          name="buy"
-                        />
-                      </div>
-                    </div>
-
-                    <p class="mb-0">
-                      1 BTC ~ <?php
-                        echo number_format($lastValue,2);?> USD
-                      <a href="#">Expected rate <br />No extra fees</a>
-                    </p>
-
-                    <button
-                      type="button"
-                      class="btn btn-primary btn-block"
-                      data-toggle="modal"
-                      data-target="#SellModal"
+                    <form
+                            name="myform"
+                            class="currency_validate trade-form row g-3"
+                            action="buybtc.php"
+                            method="post"
                     >
-                      Sell Now
-                    </button>
-                  </form>
+                        <div class="col-12">
+                            <label class="form-label">Pay</label>
+                            <div class="input-group">
+                                <select class="form-control" name="method">
+                                    <option value="bank">BTC</option>
+                                </select>
+                                <input
+                                        type="number"
+                                        name="sellval"
+                                        class="form-control"
+                                        placeholder="0.0214 BTC"
+                                />
+                            </div>
+                        </div>
+
+                        <p class="mb-0">
+                            1 BTC ~ <?php
+                            echo number_format($lastValue,2);?> USD
+                            <a href="#">Expected rate <br />No extra fees</a>
+                        </p>
+
+                        <button type="submit" class="btn btn-primary btn-block" name="SellCripto">Sell Now</button>
+
+                    </form>
                 </div>
               </div>
             </div>
