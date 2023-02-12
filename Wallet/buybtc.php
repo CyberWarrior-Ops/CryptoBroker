@@ -60,9 +60,8 @@ function Buy(){
     $messaje = "Buy ".$buy." BTC, for ".$resultValue." USD, ".$_SESSION['email']."";
     $address = base64_encode($messaje);
 
-    $insert = "UPDATE BitcoinWallet SET ammount='$resultValue',
-                     Address='$address'
-                     where ID = 1";
+    $insert = "UPDATE BitcoinWallet SET ammount='$resultValue'
+                     where ID = $ID";
     $result = mysqli_query($connection,$insert);
 
     if($result){

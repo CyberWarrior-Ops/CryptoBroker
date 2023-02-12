@@ -62,7 +62,7 @@ function Buy(){
 
     $insert = "UPDATE EtheriumWallet SET ammount='$resultValue',
                      Address='$address'
-                     where ID = 1";
+                     where ID = $ID";
     $result = mysqli_query($connection,$insert);
 
     if($result){
