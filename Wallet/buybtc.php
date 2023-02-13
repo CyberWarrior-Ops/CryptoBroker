@@ -60,9 +60,13 @@ function Buy(){
     $messaje = "Buy ".$buy." BTC, for ".$resultValue." USD, ".$_SESSION['email']."";
     $address = base64_encode($messaje);
 
-    $insert = "UPDATE BitcoinWallet SET ammount='$resultValue'
-                     where ID = $ID";
-    $result = mysqli_query($connection,$insert);
+    $select = "SELECT ammount FROM BitcoinWallet WHERE ID = $ID";
+    $selectResult = mysqli_query($connection, $select);
+    $currentAmmount = mysqli_fetch_assoc($selectResult)["ammount"];
+    $newAmmount = $currentAmmount + $resultValue;
+
+    $update = "UPDATE BitcoinWallet SET ammount='$newAmmount' where ID = $ID";
+    $result = mysqli_query($connection,$update);
 
     if($result){
         echo '
@@ -80,6 +84,8 @@ function Buy(){
         ';
     }
 }
+
+
 
 function SellCt(){
     global $connection;
@@ -104,7 +110,7 @@ function SellCt(){
         echo '
             <script>
                 alert("You dont have enough Criptos to sell");
-                window.location = "tradebtc.php";
+                window.location = "tradeetc.php";
             </script>
         ';
 }else{

@@ -195,7 +195,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
                                     <div class="user-balance">
                                         <div class="available">
                                             <p>Available</p>
-                                            <span>0.00 BTC</span>
+                                            <span>0.00 ETH</span>
                                         </div>
                                         <div class="total">
                                             <p>Total</p>
@@ -306,7 +306,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
                             <form
                                     name="myform"
                                     class="currency_validate trade-form row g-3"
-                                    action="buybtc.php"
+                                    action="buyetc.php"
                                     method="post"
                             >
                                 <div class="col-12">
@@ -337,26 +337,26 @@ if (mysqli_num_rows($resultwallet) > 0) {
                             <form
                                     name="myform"
                                     class="currency_validate trade-form row g-3"
-                                    action="buybtc.php"
+                                    action="buyetc.php"
                                     method="post"
                             >
                                 <div class="col-12">
                                     <label class="form-label">Pay</label>
                                     <div class="input-group">
                                         <select class="form-control" name="method">
-                                            <option value="bank">BTC</option>
+                                            <option value="bank">ETH</option>
                                         </select>
                                         <input
                                                 type="number"
                                                 name="sellval"
                                                 class="form-control"
-                                                placeholder="0.0214 BTC"
+                                                placeholder="0.0214 ETC"
                                         />
                                     </div>
                                 </div>
 
                                 <p class="mb-0">
-                                    1 BTC ~ <?php
+                                    1 ETC ~ <?php
                                     echo number_format($lastValue,2);?> USD
                                     <a href="#">Expected rate <br />No extra fees</a>
                                 </p>

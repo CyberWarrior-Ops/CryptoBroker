@@ -28,7 +28,7 @@ if (mysqli_num_rows($getIDResult) > 0) {
 
 
 $ID = $_SESSION['id'];
-//Bitcoin get last value
+//Eth get last value
 
 $lastRecord = "SELECT * FROM Etherium ORDER BY ID DESC LIMIT 1";
 $resultbtc = mysqli_query($connection, $lastRecord);
@@ -60,18 +60,22 @@ function Buy(){
     $messaje = "Buy ".$buy." BTC, for ".$resultValue." USD, ".$_SESSION['email']."";
     $address = base64_encode($messaje);
 
-    $insert = "UPDATE EtheriumWallet SET ammount='$resultValue',
-                     Address='$address'
-                     where ID = $ID";
-    $result = mysqli_query($connection,$insert);
+    $select = "SELECT ammount FROM EtheriumWallet WHERE ID = $ID";
+    $selectResult = mysqli_query($connection, $select);
+    $currentAmmount = mysqli_fetch_assoc($selectResult)["ammount"];
+    $newAmmount = $currentAmmount + $resultValue;
+
+    $update = "UPDATE EtheriumWallet SET ammount='$newAmmount' where ID = '$ID'";
+    $result = mysqli_query($connection,$update);
 
     if($result){
         echo '
             <script>
-                alert("Buy Succesfull");
-                window.location = "tradebtc.php";
+                alert("Buy Succesful, Total amount: ' . $newAmmount . '");
+                window.location = "tradeetc.php";
             </script>
         ';
+
     }else{
         echo '
             <script>
@@ -81,6 +85,7 @@ function Buy(){
         ';
     }
 }
+
 
 function SellCt(){
     global $connection;
