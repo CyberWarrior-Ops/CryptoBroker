@@ -329,12 +329,11 @@ $Total = number_format(($BTW * $BTC) + ($LTW * $LTC) + ($EtW * $ETC),2,'.','');
                         echo $_SESSION['FullName'];
                       ?>!</h4>
                       <p>
-                        Looks like you are not verified yet. Verify yourself to
-                        use the full potential of CriptoBroker.
+                        Welcome to your CryptoBroker Dashboard!
                       </p>
 
                       <ul>
-                        <li>
+                        <!--<li>
                           <a href="#">
                             <span class="verified"
                               ><i class="icofont-check"></i
@@ -342,8 +341,8 @@ $Total = number_format(($BTW * $BTC) + ($LTW * $LTC) + ($EtW * $ETC),2,'.','');
                             Verify account
                           </a>
                         </li>
-                        <li>
-                          <a href="#">
+                        <li>-->
+                         <!-- <a href="#">
                             <span class="not-verified"
                               ><i class="icofont-close-line"></i
                             ></span>
@@ -356,159 +355,15 @@ $Total = number_format(($BTW * $BTC) + ($LTW * $LTC) + ($EtW * $ETC),2,'.','');
                               ><i class="icofont-close-line"></i
                             ></span>
                             Deposit money
-                          </a>
+                          </a>-->
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
-
-                <div class="col-xxl-12 col-xl-12 col-lg-6">
-                  <div class="card">
-                    <div class="card-header">
-                      <h4 class="card-title">Quick Trade</h4>
-                    </div>
-                    <div class="card-body">
-                      <form
-                        name="myform"
-                        class="currency_validate trade-form row g-3"
-                      >
-                        <div class="col-12">
-                          <label class="form-label">You Send</label>
-                          <div class="input-group">
-                            <select class="form-select" name="method">
-                              <option value="bank">USD</option>
-                              <option value="master">Euro</option>
-                            </select>
-                            <input
-                              type="text"
-                              name="currency_amount"
-                              class="form-control"
-                              placeholder="0.0214 BTC"
-                            />
-                          </div>
-                        </div>
-
-                        <div class="col-12">
-                          <label class="form-label">You get</label>
-                          <div class="input-group">
-                            <select class="form-select" name="method">
-                              <option value="bank">BTC</option>
-                              <option value="master">ETH</option>
-                            </select>
-                            <input
-                              type="text"
-                              name="currency_amount"
-                              class="form-control"
-                              placeholder="0.0214 BTC"
-                            />
-                          </div>
-                        </div>
-
-                        <p class="mb-0">
-                          1 USD ~ 0.000088 BTC
-                          <a href="#">Expected rate <br />No extra fees</a>
-                        </p>
-
-                        <button
-                          type="submit"
-                          name="submit"
-                          class="btn btn-primary btn-block"
-                        >
-                          Exchange Now
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-
-
-
-                <!-- <div class="col-xxl-12 col-xl-6 col-lg-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="invite-content">
-                                        <h4>Get free BTC every day</h4>
-                                        <p>Earn free bitcoins in rewards by completing a learning mission daily or
-                                            inviting
-                                            friends to Tendex. <a href="#">Learn more</a>
-
-                                        </p>
-
-                                        <a href="#" class="btn btn-primary">Invite friends to join</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
               </div>
             </div>
-              <!--
-            <div class="col-xl-9">
-              <div class="row">
-                <div class="col-xxl-8 col-xl-8">
-                  <div class="card home-chart">
-                    <div class="card-header">
-                      <h4 class="card-title home-chart">Analytics</h4>
-                      <select
-                        class="form-select d-none"
-                        name="report-type"
-                        id="report-select"
-                      >
-                        <option value="1">Bitcoin</option>
-                        <option value="2">Litecoin</option>
-                      </select>
-                    </div>
-                    <div class="card-body">
-                      <div class="home-chart-height">
-                        <div class="row">
-                          <div
-                            class="
-                              col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6
-                            "
-                          >
-                            <div class="chart-price-value">
-                              <span>24hr Volume</span>
-                              <h5>$236,368.00</h5>
-                            </div>
-                          </div>
-                          <div
-                            class="
-                              col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6
-                            "
-                          >
-                            <div class="chart-price-value">
-                              <span>Marketcap</span>
-                              <h5>$236.025B USD</h5>
-                            </div>
-                          </div>
-                          <div
-                            class="
-                              col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6
-                            "
-                          >
-                            <div class="chart-price-value">
-                              <span>24hr Volume</span>
-                              <h5>56.3 BTC</h5>
-                            </div>
-                          </div>
-                          <div
-                            class="
-                              col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6
-                            "
-                          >
 
-                            <div class="chart-price-value">
-                              <span>All Time High</span>
-                              <h5>$236,368.00</h5>
-                            </div>
-                          </div>
-                        </div>
-                        <div id="chartx"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
--->
               <div class="col-xxl-8">
                   <div class="card">
                       <div class="card-header">
@@ -531,38 +386,38 @@ $Total = number_format(($BTW * $BTC) + ($LTW * $LTC) + ($EtW * $ETC),2,'.','');
                                           </div>
                                           <div class="text-end">
                                               <h5><?php echo $BTW?> BTC</h5>
-                                              <span><?php echo number_format($BTC,2,'.',',')?> USD</span>
+                                              <span>Price on Market: <?php echo number_format($BTC,2,'.',',')?> USD</span>
                                           </div>
                                       </li>
                                       <li>
                                           <div class="icon-title">
-                                              <i class="cc USDT"></i>
+                                              <i class="cc ETH"></i>
                                               <span>Ethereum</span>
                                           </div>
                                           <div class="text-end">
                                               <h5><?php echo $EtW?> ETH</h5>
-                                              <span><?php echo number_format($ETC,2,'.',',')?> USD</span>
+                                              <span>Price on Market: <?php echo number_format($ETC,2,'.',',')?> USD</span>
                                           </div>
                                       </li>
                                       <li>
                                           <div class="icon-title">
-                                              <i class="cc XTZ"></i>
+                                              <i class="cc LTC"></i>
                                               <span>LiteCoin</span>
                                           </div>
                                           <div class="text-end">
                                               <h5><?php echo $LTW?> LTC</h5>
-                                              <span><?php echo number_format($LTC,2,'.',',')?> USD</span>
+                                              <span>Price on Market: <?php echo number_format($LTC,2,'.',',')?> USD</span>
                                           </div>
                                       </li>
                                       <li>
-                                          <div class="icon-title">
+                                          <!--<div class="icon-title">
                                               <i class="cc XMR"></i>
                                               <span>Monero</span>
                                           </div>
                                           <div class="text-end">
                                               <h5>0.000242 XMR</h5>
                                               <span>0.125 USD</span>
-                                          </div>
+                                          </div>-->
                                       </li>
                                   </ul>
                               </div>

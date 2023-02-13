@@ -162,10 +162,6 @@ if (mysqli_num_rows($resultwallet) > 0) {
                             </div>
                           </div>
                         </a>
-
-                        <a href="./settings-activity.html"
-                          >More <i class="icofont-simple-right"></i
-                        ></a>
                       </div>
                     </div>
                   </div>
@@ -182,40 +178,28 @@ if (mysqli_num_rows($resultwallet) > 0) {
                     <div class="dropdown-menu dropdown-menu-right">
                       <div class="user-email">
                         <div class="user">
-                          <span class="thumb"
-                            ><img src="../images/profile/2.png" alt=""
-                          /></span>
-                          <div class="user-info">
-                            <h5>Jannatul Maowa</h5>
-                            <span>Tendex.inc@gmail.com</span>
-                          </div>
                         </div>
                       </div>
 
                       <div class="user-balance">
                         <div class="available">
                           <p>Available</p>
-                          <span>0.00 BTC</span>
+                          <span><?php
+                              echo $criptoWallet;
+                              ?> BTC</span>
                         </div>
                         <div class="total">
                           <p>Total</p>
-                          <span>0.00 USD</span>
+                          <span><?php
+                              echo number_format(floatval($criptoWallet) * floatval($lastValue),2);
+                              ?> USD</span>
                         </div>
                       </div>
-                      <a href="profile.html" class="dropdown-item">
-                        <i class="bi bi-person"></i>Profile
-                      </a>
                       <a href="wallet.php" class="dropdown-item">
                         <i class="bi bi-wallet"></i>Wallet
                       </a>
-                      <a href="settings-profile.html" class="dropdown-item">
+                      <a href="../User/settings-profile.php" class="dropdown-item">
                         <i class="bi bi-gear"></i> Setting
-                      </a>
-                      <a href="settings-activity.html" class="dropdown-item">
-                        <i class="bi bi-clock-history"></i> Activity
-                      </a>
-                      <a href="../reset/lock.html" class="dropdown-item">
-                        <i class="bi bi-lock"></i>Lock
                       </a>
                       <a href="../login/signin.php" class="dropdown-item logout">
                         <i class="bi bi-power"></i> Logout
@@ -232,7 +216,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
       <div class="sidebar">
         <div class="brand-logo">
           <a href="../index.php"
-            ><img src="../images/logoi.png" alt="" width="30" />
+            ><img src="../images/logow.png" alt="" width="30" />
           </a>
         </div>
         <div class="menu">
@@ -269,7 +253,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
             </li>
             <li>
               <a
-                href="settings-profile.html"
+                href="../User/settings-profile.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Settings"
