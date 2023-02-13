@@ -181,7 +181,7 @@
     <div class="sidebar">
         <div class="brand-logo">
             <a href="../index.php"
-            ><img src="../images/logoi.png" alt="" width="30" />
+            ><img src="../images/logow.png" alt="" width="30" />
             </a>
         </div>
         <div class="menu">
@@ -198,22 +198,12 @@
                 </li>
                 <li>
                     <a
-                        href="tradebtc.php"
+                        href="Cyptos.php"
                         data-toggle="tooltip"
                         data-placement="right"
                         title="Trade"
                     >
-                        <span><i class="bi bi-globe2"></i></span>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="wallet.html"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Wallet"
-                    >
-                        <span><i class="bi bi-wallet2"></i></span>
+                        <span><i class="bi bi-cash"></i></span>
                     </a>
                 </li>
                 <li>
@@ -293,18 +283,25 @@
     <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
         <h2>Which Crypto Currency do you wish to buy?</h2>
         <div style="display: flex; justify-content: center;">
-            <div class="crypto-box bitcoin" style="background: #F7931A">
+            <button class="crypto-box bitcoin" style="background: #F7931A; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 16px;" onclick="window.location.href='tradebtc.php'">
                 <i class=""></i>
                 <h3 style="color: white">Bitcoin</h3>
-            </div>
-            <div class="crypto-box litecoin" style="background: black">
+                <img src="../images/btc.png" width="70px" height="auto">
+            </button>
+
+
+            <button class="crypto-box etherium" style="background: black; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 16px;" onclick="window.location.href='tradeetc.php'">
                 <i class="water"></i>
                 <h3 style="color: white">Etherium</h3>
-            </div>
-            <div class="crypto-box litecoin" style="background: #00aeff">
+                <img src="../images/eth.png" width="70px" height="auto">
+            </button>
+
+            <button class="crypto-box litecoin" style="background: #00aeff; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 16px;" onclick="window.location.href='tradeltc.php'">
                 <i class=""></i>
                 <h3 style="color: white">Litecoin</h3>
-            </div>
+                <img src="../images/liteCoin.png" width="70px" height="auto">
+            </button>
+
         </div>
     </div>
 

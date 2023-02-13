@@ -259,22 +259,12 @@ $Total = number_format(($BTW * $BTC) + ($LTW * $LTC) + ($EtW * $ETC),2,'.','');
             </li>
             <li>
               <a
-                href="../Wallet/tradebtc.php"
+                href="../Wallet/Cyptos.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Trade"
               >
                 <span><i class="bi bi-cash-stack"></i></span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="../Wallet/wallet.php"
-                data-toggle="tooltip"
-                data-placement="right"
-                title="Wallet"
-              >
-                <span><i class="bi bi-wallet2"></i></span>
               </a>
             </li>
             <li>

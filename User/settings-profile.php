@@ -218,59 +218,6 @@ if (isset($_POST['update_button'])) {
                       </div>
                     </div>
                   </div>
-
-                  <div class="profile_log dropdown">
-                    <div class="user" data-toggle="dropdown">
-                      <span class="thumb"
-                        ><img src="../images/profile/2.png" alt=""
-                      /></span>
-                      <span class="arrow"
-                        ><i class="icofont-angle-down"></i
-                      ></span>
-                    </div>
-                    <div class="dropdown-menu dropdown-menu-right">
-                      <div class="user-email">
-                        <div class="user">
-                          <span class="thumb"
-                            ><img src="../images/profile/2.png" alt=""
-                          /></span>
-                          <div class="user-info">
-                            <h5><?php echo $Name?></h5>
-                            <span><?php echo $mail?></span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="user-balance">
-                        <div class="available">
-                          <p>Available</p>
-                          <span>0.00 BTC</span>
-                        </div>
-                        <div class="total">
-                          <p>Total</p>
-                          <span>0.00 USD</span>
-                        </div>
-                      </div>
-                      <a href="profile.uknow" class="dropdown-item">
-                        <i class="bi bi-person"></i>Profile
-                      </a>
-                      <a href="../Wallet/wallet.php" class="dropdown-item">
-                        <i class="bi bi-wallet"></i>Wallet
-                      </a>
-                      <a href="settings-profile.html" class="dropdown-item">
-                        <i class="bi bi-gear"></i> Setting
-                      </a>
-                      <a href="settings-activity.php" class="dropdown-item">
-                        <i class="bi bi-clock-history"></i> Activity
-                      </a>
-                      <a href="../reset/lock.html" class="dropdown-item">
-                        <i class="bi bi-lock"></i>Lock
-                      </a>
-                      <a href="../login/signin.php" class="dropdown-item logout">
-                        <i class="bi bi-power"></i> Logout
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -281,7 +228,7 @@ if (isset($_POST['update_button'])) {
       <div class="sidebar">
         <div class="brand-logo">
           <a href="../index.php"
-            ><img src="../images/logoi.png" alt="" width="30" />
+            ><img src="../images/logow.png" alt="" width="30" />
           </a>
         </div>
         <div class="menu">
@@ -298,22 +245,12 @@ if (isset($_POST['update_button'])) {
             </li>
             <li>
               <a
-                href="../Wallet/tradebtc.php"
+                href=".../Wallet/Cyptos.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Trade"
               >
-                <span><i class="bi bi-globe2"></i></span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="../Wallet/wallet.php"
-                data-toggle="tooltip"
-                data-placement="right"
-                title="Wallet"
-              >
-                <span><i class="bi bi-wallet2"></i></span>
+                <span><i class="bi bi-cash"></i></span>
               </a>
             </li>
             <li>
@@ -360,7 +297,6 @@ if (isset($_POST['update_button'])) {
                     <a href="settings-privacy.php">Privacy</a>
                     <a href="settings-payment-method.php">Payment Method</a>
                     <a href="settings-api.php">API</a>
-                    <a href="settings-fees.html">Fees</a>
                   </div>
                 </div>
                 <div class="card-body">
