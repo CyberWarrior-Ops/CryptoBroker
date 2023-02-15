@@ -121,7 +121,7 @@ INSERT INTO `Etherium` (`ID`, `value`) VALUES
 CREATE TABLE `EtheriumWallet` (
   `ID` int(11) NOT NULL,
   `ammount` int(11) DEFAULT NULL,
-  `Address` varchar(40) NOT NULL
+  `Address` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -157,7 +157,7 @@ INSERT INTO `LiteCoin` (`ID`, `value`) VALUES
 --
 
 CREATE TABLE `LiteCoinWallet` (
-  `ID` int(11) DEFAULT NULL,
+  `ID` int(11) NOT NULL,
   `ammount` int(11) DEFAULT NULL,
   `Adress` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
