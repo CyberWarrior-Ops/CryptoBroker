@@ -5,7 +5,7 @@ CryptoBroker is a vulnerable website based on web technologies created by CyberW
 ## TODO
 
 - [X] Finish database relations. ![100%](https://progress-bar.dev/100)
-- [X] Add documentation. !100%](https://progress-bar.dev/100)
+- [X] Add documentation. [!100%](https://progress-bar.dev/100)
 - [X] DataBase Logic. ![100%](https://progress-bar.dev/100)
 - [X] Finish routes. ![100%](https://progress-bar.dev/100)
 - [X] Start the Front-end. ![10%](https://progress-bar.dev/100)
