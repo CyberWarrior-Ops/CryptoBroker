@@ -4,18 +4,18 @@ CryptoBroker is a vulnerable website based on web technologies created by CyberW
 
 ## TODO
 
-- [ ] Finish database relations. ![80%](https://progress-bar.dev/80)
-- [ ] Add documentation. ![50%](https://progress-bar.dev/50)
-- [ ] DataBase Logic. ![100%](https://progress-bar.dev/100)
-- [ ] Finish routes. ![50%](https://progress-bar.dev/50)
-- [ ] Start the Front-end. ![10%](https://progress-bar.dev/10)
-    - [ ] HomePage. ![100%](https://progress-bar.dev/100)
+- [X] Finish database relations. ![100%](https://progress-bar.dev/100)
+- [X] Add documentation. !100%](https://progress-bar.dev/100)
+- [X] DataBase Logic. ![100%](https://progress-bar.dev/100)
+- [X] Finish routes. ![100%](https://progress-bar.dev/100)
+- [X] Start the Front-end. ![10%](https://progress-bar.dev/100)
+    - [X] HomePage. ![100%](https://progress-bar.dev/100)
 
-    - [ ] LoginPage. ![100%](https://progress-bar.dev/100)
-    - [ ] RegisterPage. ![100%](https://progress-bar.dev/100)
-    - [ ] DashBoardPage. ![10%](https://progress-bar.dev/10)
-    - [ ] Buy Criptos Logic ![80%](https://progress-bar.dev/80)
-    - [ ] Sell Criptos Logic ![60%](https://progress-bar.dev/60)
+    - [X] LoginPage. ![100%](https://progress-bar.dev/100)
+    - [X] RegisterPage. ![100%](https://progress-bar.dev/100)
+    - [X] DashBoardPage. ![100%](https://progress-bar.dev/100)
+    - [X] Buy Criptos Logic ![100%](https://progress-bar.dev/100)
+    - [X] Sell Criptos Logic ![100%](https://progress-bar.dev/100)
 
 ## Project dependencies
 
