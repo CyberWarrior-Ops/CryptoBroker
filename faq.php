@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Tendex</title>
+    <title>FAQ</title>
     <!-- Favicon icon -->
     <link
       rel="icon"
@@ -28,7 +28,7 @@
               <div class="navigation">
                 <nav class="navbar navbar-expand-lg navbar-light">
                   <div class="brand-logo">
-                    <a href="index.html">
+                    <a href="index.php">
                       <img
                               src="./images/logo.png"
                               alt=""
@@ -120,7 +120,7 @@
                 <div class="terms_condition-text">
                   <h3>Frequently Asked Questions</h3>
                   <p>
-                    Tendex is an instant cryptocurrency exchange that allows you
+                    CriptoBroker is an instant cryptocurrency exchange that allows you
                     to exchange crypto fast and buy it with a bank card. The
                     service provides the best crypto-to-crypto rates and
                     supports over 140 cryptocurrencies available for exchange
@@ -128,11 +128,11 @@
                 </div>
 
                 <div class="terms_condition-text">
-                  <h3>How does Tendex work?</h3>
+                  <h3>How does CriptoBroker work?</h3>
                   <p>
-                    Tendex’s trading algorithm is integrated into the largest
+                    CB’s trading algorithm is integrated into the largest
                     cryptocurrency exchange platforms, including Binance,
-                    Poloniex, Bittrex, etc. In the span of milliseconds, Tendex
+                    Poloniex, Bittrex, etc. In the span of milliseconds, CB
                     makes bids and asks on the platforms, then selects and
                     suggests the best available rate and displays the estimated
                     rate on our site. The rates remain approximate until the
@@ -147,7 +147,7 @@
                 <div class="terms_condition-text">
                   <h3>Why should I trust you?</h3>
                   <p>
-                    Tendex is one of the most prominent instant cryptocurrency
+                    CriptoBroker is one of the most prominent instant cryptocurrency
                     exchanges that has gained the trust of more than 2M users
                     from all over the world. The service provides safe and fast
                     transactions without revealing users identities. We provide
@@ -179,9 +179,9 @@
                 </div>
 
                 <div class="terms_condition-text">
-                  <h3>Does Tendex fix rates?</h3>
+                  <h3>Does CriptoBroker fix rates?</h3>
                   <p>
-                    Tendex mobile app does! Mobile app users will no longer be
+                    CB mobile app does! Mobile app users will no longer be
                     affected by the risks associated with crypto market
                     fluctuations. Soon, the fixed-rate exchanges will also be
                     implemented on the web version. To lock the current exchange
@@ -191,7 +191,7 @@
                     which should be more than enough to carry out the exchange.
                   </p>
                   <p>
-                    Alternatively, Tendex offers our lowest fee of 0.25% for all
+                    Alternatively, CB offers our lowest fee of 0.25% for all
                     crypto-to-crypto exchanges made at a floating rate.
                   </p>
                 </div>

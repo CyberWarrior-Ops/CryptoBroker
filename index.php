@@ -246,7 +246,8 @@ mysqli_close($connection);
 
 
                           <p class="mb-0">
-                              1 USD ~ 0.000088 BTC
+                              1 BTC ~ <?php
+                              echo number_format($rowBTC1,2,'.',',')?> USD
                               <a href="#" class="yellowText">Expected rate <br />No extra fees</a>
                           </p>
                           <button type="button" id="calculate-button" class="btn btn-primary">Calculate</button>
