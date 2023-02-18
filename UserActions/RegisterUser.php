@@ -29,18 +29,17 @@
 
     $execute = mysqli_query($connection,$query);
 
-    if($execute && $queryBtc && $queryEth && $queryLite && $queryLite && $queryUserInfo){
-        echo '
-            <script>
-                alert("User registered successfully");
-                window.location = "../login/signin.php";
-            </script>
-        ';
-    }else{
+    if ($execute && $queryBtc && $queryEth && $queryLite && $queryLite && $queryUserInfo == false){
         echo '
             <script>
                 alert("Try again, user not stored");
                 window.location = "../login/signin.php";
             </script>
         ';
+    }else{
+        echo'
+        <script>
+        alert("User registered successfully");
+        window.location = "../login/signin.php";
+        </script>';
     }
