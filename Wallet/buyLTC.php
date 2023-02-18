@@ -1,3 +1,7 @@
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
+</html>
+
 <?php
 session_start();
 
@@ -70,18 +74,29 @@ function Buy(){
 
     if($result){
         echo '
-            <script>
-                alert("Buy Succesful");
+           <script>
+            swal.fire({
+            title: "Success!",
+            text: "Buy Succesful",
+            icon: "success",
+            type: "Success"
+        }).then(function() {
                 window.location = "tradeLTC.php";
-            </script>
+        });
+    </script>
         ';
 
     }else{
         echo '
             <script>
-                alert("Buy Failed ");
+        swal.fire({
+            title: "Error!",
+            text: "Buy Failed",
+            icon: "error",
+        }).then(function() {
                 window.location = "tradeLTC.php";
-            </script>
+        });
+    </script>
         ';
     }
 }
@@ -108,10 +123,15 @@ function SellCt(){
 
     if($criptoWallet - $sell<0){
         echo '
-            <script>
-                alert("You dont have enough Criptos to sell");
-                window.location = "tradeetc.php";
-            </script>
+              <script>
+        swal.fire({
+            title: "Error!",
+            text: "No enough LTC on wallet",
+            icon: "error",
+        }).then(function() {
+                window.location = "tradeLTC.php";
+        });
+    </script>
         ';
     }else{
         $newAmmount = floatval($criptoWallet) - floatval($sell);
@@ -125,18 +145,28 @@ function SellCt(){
 
         if(true){
             echo '
-            <script>
-                var variablePHP = '. json_encode($newAmmount) .';
-                alert("Sell Succesfull. Valor de la variable: " + variablePHP);
-                window.location = "tradeetc.php";
-            </script>
+              <script>
+            swal.fire({
+            title: "Success!",
+            text: "Sell Succesful",
+            icon: "success",
+            type: "Success"
+        }).then(function() {
+                window.location = "tradeLTC.php";
+        });
+    </script>
         ';
         }else{
             echo '
-            <script>
-                alert("Sell Failed ");
-                window.location = "tradeetc.php";
-            </script>
+           <script>
+        swal.fire({
+            title: "Error!",
+            text: "Failure selling",
+            icon: "error",
+        }).then(function() {
+                window.location = "tradeLTC.php";
+        });
+    </script>
         ';
         }
     }

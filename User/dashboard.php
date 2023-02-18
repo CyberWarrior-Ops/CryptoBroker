@@ -1,3 +1,6 @@
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
+</html>
 <?php
 
 session_start();
@@ -6,20 +9,26 @@ $connection = mysqli_connect("localhost","root","","Cripto");
 
 if(!isset($_SESSION['email'])){
     echo '
-        <script>
-            alert("You must login first");
-            window.location = "../login/signin.php";
-        </script>
+         <script>
+        swal.fire({
+            title: "Error!",
+            text: "First Log In!",
+            icon: "error",
+        }).then(function() {
+               window.location = "../login/signin.php";
+        });
+    </script> 
     ';
     session_destroy();
     die();
 }
+$mail = $_SESSION['email'];
 $GetCriptos = "SELECT EW.ammount Etherium, bw.ammount Bitcoin, lt.ammount LiteCoin
 from EtheriumWallet EW
 join BitcoinWallet bw on EW.ID = bw.ID
 join LiteCoinWallet lt on lt.ID = bw.ID
 join login l on l.ID =lt.ID
-WHERE l.email = 'admin@gmail.com'";
+WHERE l.email = '$mail'";
 
 $result = mysqli_query($connection,$GetCriptos);
 

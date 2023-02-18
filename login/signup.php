@@ -29,7 +29,7 @@
                 <a href="../index.php"
                   ><img src="../images/logo.png" alt=""
                 /></a>
-                <h4 class="card-title mt-5">Create your account</h4>
+                <h4 class="card-title mt-5" style="color: white">Create your account</h4>
               </div>
               <div class="auth-form card">
                 <div class="card-body">
@@ -66,7 +66,7 @@
                     </div>
                     <div class="col-12">
                       <div class="form-check form-switch">
-                        <input
+                        <input required
                           class="form-check-input"
                           type="checkbox"
                           id="flexSwitchCheckDefault"
@@ -113,8 +113,56 @@
   </body>
 </html>
 
-<style>
-    @@dashboard{
 
+<style>
+    .btn-primary {
+        background-color: #c2b42c !important;
+        border-color: #c2b42c !important;
     }
+    .text-primary {
+        color: #c2b42c !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #867d1e !important;
+        border-color: #867d1e !important;
+    }
+
+    .btn-primary:focus {
+        background-color: #867d1e !important;
+        border-color: #867d1e !important;
+    }
+
+    .header-text{
+        color: #867d1e !important;
+    }
+    #main-wrapper , .footer , .bottom, .intro2 , .header, .contact-form , .bg-light {
+        background: #000000 !important;
+    }
+
+    .sparkline8{
+        fill:#c2b42c !important;
+    }
+
+    h2, .fa, .yellowText{
+        color: #c2b42c !important;
+    }
+
+    .section-title{
+        color: rgb(161, 161, 161) !important;
+    }
+    .trust-content{
+        color: rgb(161, 161, 161) !important;
+    }
+
+    .btn-outline-dark{
+        color: #c2b42c !important;
+        border-color: #c2b42c !important;
+    }
+    .btn-outline-dark:hover{
+        color: white !important;
+        border-color: #c2b42c !important;
+        background: #c2b42c !important;
+    }
+
 </style>
