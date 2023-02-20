@@ -135,7 +135,7 @@ function SellCt(){
     }else{
         $newAmmount = floatval($criptoWallet) - floatval($sell);
         $newAmmount = number_format($newAmmount, 8, '.', '');
-        $insert = "UPDATE EtheriumWallet SET ammount='$newAmmount' where ID = '$ID'";
+        $insert = "UPDATE EtheriumWallet SET ammount='$newAmmount'  where ID = '$ID'";
         $result = mysqli_query($connection,$insert);
         if (!$result) {
             die("Query failed: " . mysqli_error($connection));
