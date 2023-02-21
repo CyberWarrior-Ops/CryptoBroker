@@ -72,7 +72,16 @@ function Buy(){
     $update = "UPDATE LiteCoinWallet SET ammount='$newAmmount' where ID = '$ID'";
     $result = mysqli_query($connection,$update);
 
-    if($result){
+    //Logs
+    $actualDate = date('Y-m-d');
+    $LogsMessage = ($actualDate.'- User-'.$ID.' ETH Transaction + '.$lastValue.'New value: '.$newAmmount);
+    $hash = password_hash($LogsMessage,PASSWORD_DEFAULT);
+    $Logs = "INSERT INTO logsUser(ID, date, text, type) VALUES ('$ID', '$actualDate', '$hash', 'Buy')";
+    $QueryLogs = mysqli_query($connection, $Logs);
+    if (!$QueryLogs) {
+        echo 'Logs system not working: ' . mysqli_error($connection);
+    }
+    if($result && $QueryLogs){
         echo '
            <script>
             swal.fire({
@@ -142,8 +151,17 @@ function SellCt(){
             die("Query failed: " . mysqli_error($connection));
         }
 
+        $actualDate = date('Y-m-d');
+        $LogsMessage = ($actualDate.'- User-'.$ID.' LTC Transaction - '.floatval($sell).'New value: '.$newAmmount);
+        $hash = password_hash($LogsMessage,PASSWORD_DEFAULT);
+        $Logs = "INSERT INTO logsUser(ID, date, text, type) VALUES ('$ID', '$actualDate', '$hash', 'Sell')";
+        $QueryLogs = mysqli_query($connection, $Logs);
+        if (!$QueryLogs) {
+            echo 'Logs system not working: ' . mysqli_error($connection);
+        }
 
-        if(true){
+
+        if(true && $QueryLogs){
             echo '
               <script>
             swal.fire({
