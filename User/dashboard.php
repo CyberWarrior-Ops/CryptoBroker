@@ -137,52 +137,42 @@ $Total = number_format(($BTW * $BTC) + ($LTW * $LTC) + ($EtW * $ETC),2,'.','');
                     >
                       <h4>Announcements</h4>
                       <div class="lists">
-                        <a href="#" class="">
-                          <div class="d-flex align-items-center">
-                            <span class="me-3 icon success"
-                              ><i class="bi bi-check"></i
-                            ></span>
-                            <div>
-                              <p>Account created successfully</p>
-                              <span>2020-11-04 12:00:23</span>
-                            </div>
-                          </div>
-                        </a>
-                        <a href="#" class="">
-                          <div class="d-flex align-items-center">
-                            <span class="me-3 icon fail"
-                              ><i class="bi bi-x"></i
-                            ></span>
-                            <div>
-                              <p>2FA verification failed</p>
-                              <span>2020-11-04 12:00:23</span>
-                            </div>
-                          </div>
-                        </a>
-                        <a href="#" class="">
-                          <div class="d-flex align-items-center">
-                            <span class="me-3 icon success"
-                              ><i class="bi bi-check"></i
-                            ></span>
-                            <div>
-                              <p>Device confirmation completed</p>
-                              <span>2020-11-04 12:00:23</span>
-                            </div>
-                          </div>
-                        </a>
-                        <a href="#" class="">
-                          <div class="d-flex align-items-center">
-                            <span class="me-3 icon pending"
-                              ><i class="bi bi-exclamation-triangle"></i
-                            ></span>
-                            <div>
-                              <p>Phone verification pending</p>
-                              <span>2020-11-04 12:00:23</span>
-                            </div>
-                          </div>
-                        </a>
+                          <?php
+                          // Conectarse a la base de datos
+                          $servername = "localhost";
+                          $username = "root";
+                          $password = "";
+                          $dbname = "Cripto";
+                          $conn = new mysqli($servername, $username, $password, $dbname);
+                          if ($conn->connect_error) {
+                              die("Error de conexión: " . $conn->connect_error);
+                          }
 
-                        <a href="../settings-activity.html"
+                          // Obtener los tres registros más recientes de la tabla "logsUser"
+                          $sql = "SELECT type, date FROM logsUser ORDER BY date DESC LIMIT 3";
+                          $result = $conn->query($sql);
+
+                          // Mostrar los registros en el formato deseado
+                          if ($result->num_rows > 0) {
+                              while($row = $result->fetch_assoc()) {
+                                  echo '<a href="#" class="">
+      <div class="d-flex align-items-center">
+        <span class="me-3 icon success"><i class="bi bi-check"></i></span>
+        <div>
+          <p>'.$row["type"].'</p>
+          <span>'.$row["date"].'</span>
+        </div>
+      </div>
+    </a>';
+                              }
+                          } else {
+                              echo "No se encontraron registros.";
+                          }
+                          $conn->close();
+                          ?>
+
+
+                          <a href="../settings-activity.html"
                           >More <i class="icofont-simple-right"></i
                         ></a>
                       </div>

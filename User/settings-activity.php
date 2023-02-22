@@ -371,220 +371,40 @@
                             <thead>
                               <tr>
                                 <th>Action</th>
-                                <th>Source</th>
                                 <th>IP Address</th>
                                 <th>Location</th>
-                                <th>When</th>
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td>verified second factor</td>
-                                <td>api</td>
+                              <?php
+                              // Conectarse a la base de datos
+                              $servername = "localhost";
+                              $username = "root";
+                              $password = "";
+                              $dbname = "Cripto";
+                              $conn = new mysqli($servername, $username, $password, $dbname);
+                              if ($conn->connect_error) {
+                                  die("Error de conexión: " . $conn->connect_error);
+                              }
+
+                              // Obtener los tres registros más recientes de la tabla "logsUser"
+                              $sql = "SELECT ID,text,type, date FROM logsUser";
+                              $result = $conn->query($sql);
+
+                              // Mostrar los registros en el formato deseado
+                              if ($result->num_rows > 0) {
+                                  while($row = $result->fetch_assoc()) {
+                                      echo '<tr>
+                                <td>'.$row["type"].'</td>
                                 <td>157.119.239.254</td>
                                 <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">about 1 hour ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>verified second factor</td>
-                                <td>api</td>
-                                <td>157.119.239.254</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">about 2 hours ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>second factor failure</td>
-                                <td>api</td>
-                                <td>157.119.239.254</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">about 2 hours ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>device confirmation completed</td>
-                                <td>web</td>
-                                <td>157.119.239.254</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">1 day ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>signin</td>
-                                <td>web</td>
-                                <td>157.119.239.254</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">1 day ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>verified second factor</td>
-                                <td>web</td>
-                                <td>157.119.239.254</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">1 day ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>signout</td>
-                                <td>web</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">8 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>signin</td>
-                                <td>web</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">8 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>verified second factor</td>
-                                <td>web</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">8 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>signout</td>
-                                <td>api</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">8 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>signout</td>
-                                <td>api</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">8 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>device confirmation completed</td>
-                                <td>web</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">8 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>signin</td>
-                                <td>web</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">8 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>verified second factor</td>
-                                <td>web</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">8 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>signout</td>
-                                <td>api</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">15 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>verified second factor</td>
-                                <td>web</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">15 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>signin</td>
-                                <td>web</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">15 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>signout</td>
-                                <td>api</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">15 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>verified second factor</td>
-                                <td>web</td>
-                                <td>23.106.249.39</td>
-                                <td>Singapore</td>
-                                <td>
-                                  <a href="#">15 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>verified second factor</td>
-                                <td>api</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">15 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>phone verified</td>
-                                <td>api</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">15 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>phone added</td>
-                                <td>api</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">15 days ago</a>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>signin</td>
-                                <td>api</td>
-                                <td>157.119.239.214</td>
-                                <td>Bangladesh</td>
-                                <td>
-                                  <a href="#">15 days ago</a>
-                                </td>
-                              </tr>
+                              </tr>';
+                                  }
+                              } else {
+                                  echo "No se encontraron registros.";
+                              }
+                              $conn->close();
+                              ?>
                             </tbody>
                           </table>
                         </div>
