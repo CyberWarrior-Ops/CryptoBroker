@@ -32,20 +32,20 @@
                                 <img src="./images/logo.png" alt="">
                             </a>
                         </div> -->
-                  <div class="search">
-                    <form action="#">
-                      <div class="input-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder="Search Here"
-                        />
-                        <span class="input-group-text"
-                          ><i class="icofont-search"></i
-                        ></span>
-                      </div>
-                    </form>
-                  </div>
+                    <div class="search">
+                        <form action="Operations/search.php" method="GET">
+                            <div class="input-group">
+                                <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Search Here"
+                                />
+                                <button class="input-group-text" type="submit"
+                                ><i class="icofont-search"></i
+                                    ></button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
                 <div class="header-right">
