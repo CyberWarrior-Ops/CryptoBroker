@@ -1,5 +1,5 @@
 <?php
-// Establecer conexión
+// set conn
 $connection = mysqli_connect("localhost", "root", "", "Cripto");
 
 // Bitcoin
