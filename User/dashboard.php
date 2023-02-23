@@ -134,7 +134,7 @@ $Total = number_format(($BTW * $BTC) + ($LTW * $LTC) + ($EtW * $ETC),2,'.','');
                         dropdown-menu dropdown-menu-right
                         notification-list
                       "
-                    >
+                     >
                       <h4>Announcements</h4>
                       <div class="lists">
                           <?php
@@ -156,14 +156,14 @@ $Total = number_format(($BTW * $BTC) + ($LTW * $LTC) + ($EtW * $ETC),2,'.','');
                           if ($result->num_rows > 0) {
                               while($row = $result->fetch_assoc()) {
                                   echo '<a href="#" class="">
-      <div class="d-flex align-items-center">
-        <span class="me-3 icon success"><i class="bi bi-check"></i></span>
-        <div>
-          <p>'.$row["type"].'</p>
-          <span>'.$row["date"].'</span>
-        </div>
-      </div>
-    </a>';
+                              <div class="d-flex align-items-center">
+                                <span class="me-3 icon success"><i class="bi bi-check"></i></span>
+                                <div>
+                                  <p>'.$row["type"].'</p>
+                                  <span>'.$row["date"].'</span>
+                                </div>
+                              </div>
+                            </a>';
                               }
                           } else {
                               echo "No se encontraron registros.";
@@ -195,20 +195,20 @@ $Total = number_format(($BTW * $BTC) + ($LTW * $LTC) + ($EtW * $ETC),2,'.','');
                             ><img src="../images/profile/2.png" alt=""
                           /></span>
                           <div class="user-info">
-                            <h5>Jannatul Maowa</h5>
-                            <span>Tendex.inc@gmail.com</span>
+                            <h5><?php
+                                echo $_SESSION['FullName'];
+                                ?></h5>
+                            <span><?php
+                                echo $_SESSION['email'];
+                                ?></span>
                           </div>
                         </div>
                       </div>
 
                       <div class="user-balance">
-                        <div class="available">
-                          <p>Available</p>
-                          <span>0.00 BTC</span>
-                        </div>
                         <div class="total">
-                          <p>Total</p>
-                          <span>0.00 USD</span>
+                          <p>On Wallet</p>
+                          <span><?php echo $Total?> USD</span>
                         </div>
                       </div>
                       <a href="../profile.html" class="dropdown-item">

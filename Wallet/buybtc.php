@@ -68,7 +68,7 @@ function Buy(){
     $currentAmmount = mysqli_fetch_assoc($selectResult)["ammount"];
     $newAmmount = $currentAmmount + $resultValue;
 
-    $update = "UPDATE BitcoinWallet SET ammount='$newAmmount' where ID = $ID";
+    $update = "UPDATE BitcoinWallet SET ammount='$newAmmount', Address= '$address' where ID = $ID";
     $result = mysqli_query($connection,$update);
 
     //Logs
@@ -145,7 +145,9 @@ function SellCt(){
 }else{
         $newAmmount = floatval($criptoWallet) - floatval($sell);
         $newAmmount = number_format($newAmmount, 8, '.', '');
-        $insert = "UPDATE BitcoinWallet SET ammount='$newAmmount' where ID = '$ID'";
+        $messaje = "Sell ".$sell." BTC, ".$_SESSION['email']."";
+        $address = base64_encode($messaje);
+        $insert = "UPDATE BitcoinWallet SET ammount='$newAmmount', Address ='$address' where ID = '$ID'";
         $result = mysqli_query($connection,$insert);
         if (!$result) {
             die("Query failed: " . mysqli_error($connection));
