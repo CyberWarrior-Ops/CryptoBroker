@@ -191,12 +191,8 @@
                 <div class="card-header">
                   <div class="settings-menu">
                     <a href="settings-profile.php">Profile</a>
-                    <a href="settings-application.php">Application</a>
-                    <a href="settings-security.php">Security</a>
+
                     <a href="settings-activity.php">Activity</a>
-                    <a href="settings-privacy.php">Privacy</a>
-                    <a href="settings-payment-method.html">Payment Method</a>
-                    <a href="settings-api.php">API</a>
                   </div>
                 </div>
                 <div class="card-body">

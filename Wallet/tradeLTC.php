@@ -188,9 +188,6 @@ if (mysqli_num_rows($resultwallet) > 0) {
                                                 ?> USD</span>
                                         </div>
                                     </div>
-                                    <a href="wallet.php" class="dropdown-item">
-                                        <i class="bi bi-wallet"></i>Wallet
-                                    </a>
                                     <a href="../User/settings-profile.php" class="dropdown-item">
                                         <i class="bi bi-gear"></i> Setting
                                     </a>
@@ -232,16 +229,6 @@ if (mysqli_num_rows($resultwallet) > 0) {
                         title="Trade"
                     >
                         <span><i class="bi bi-cash-stack"></i></span>
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="wallet.php"
-                        data-toggle="tooltip"
-                        data-placement="right"
-                        title="Wallet"
-                    >
-                        <span><i class="bi bi-wallet2"></i></span>
                     </a>
                 </li>
                 <li>
@@ -333,7 +320,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
                                 </div>
 
                                 <p class="mb-0">
-                                    1 BTC ~ <?php
+                                    1 LTC ~ <?php
                                     echo number_format($lastValue,2);?> USD
                                     <a href="#">Expected rate <br />No extra fees</a>
                                 </p>
@@ -349,7 +336,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
                         <h5>Available Balance</h5>
                         <h2><span class="text-success"><?php
                                 echo $criptoWallet;
-                                ?></span> <sub>BTC</sub></h2>
+                                ?></span> <sub>LTC</sub></h2>
                         <p>= <?php
                             echo number_format(floatval($criptoWallet) * floatval($lastValue),2);
                             ?><sub>USD</sub></p>

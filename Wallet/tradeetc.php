@@ -160,9 +160,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
 
                             <div class="profile_log dropdown">
                                 <div class="user" data-toggle="dropdown">
-                      <span class="thumb"
-                      ><img src="../images/profile/2.png" alt=""
-                          /></span>
+
                                     <span class="arrow"
                                     ><i class="icofont-angle-down"></i
                                         ></span>
@@ -170,12 +168,9 @@ if (mysqli_num_rows($resultwallet) > 0) {
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <div class="user-email">
                                         <div class="user">
-                          <span class="thumb"
-                          ><img src="../images/profile/2.png" alt=""
-                              /></span>
+
                                             <div class="user-info">
                                                 <h5>Jannatul Maowa</h5>
-                                                <span>Tendex.inc@gmail.com</span>
                                             </div>
                                         </div>
                                     </div>
@@ -192,9 +187,6 @@ if (mysqli_num_rows($resultwallet) > 0) {
                                     </div>
                                     <a href="profile.html" class="dropdown-item">
                                         <i class="bi bi-person"></i>Profile
-                                    </a>
-                                    <a href="wallet.php" class="dropdown-item">
-                                        <i class="bi bi-wallet"></i>Wallet
                                     </a>
                                     <a href="settings-profile.html" class="dropdown-item">
                                         <i class="bi bi-gear"></i> Setting
@@ -220,7 +212,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
     <div class="sidebar">
         <div class="brand-logo">
             <a href="../index.php"
-            ><img src="../images/logoi.png" alt="" width="30" />
+            ><img src="../images/logow.png" alt="" width="30" />
             </a>
         </div>
         <div class="menu">
@@ -237,7 +229,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
                 </li>
                 <li>
                     <a
-                            href="tradebtc.php"
+                            href="tradeetc.php"
                             data-toggle="tooltip"
                             data-placement="right"
                             title="Trade"
@@ -247,17 +239,7 @@ if (mysqli_num_rows($resultwallet) > 0) {
                 </li>
                 <li>
                     <a
-                            href="wallet.php"
-                            data-toggle="tooltip"
-                            data-placement="right"
-                            title="Wallet"
-                    >
-                        <span><i class="bi bi-wallet2"></i></span>
-                    </a>
-                </li>
-                <li>
-                    <a
-                            href="settings-profile.html"
+                            href="../User/settings-profile.php"
                             data-toggle="tooltip"
                             data-placement="right"
                             title="Settings"

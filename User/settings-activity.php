@@ -191,12 +191,7 @@
                 <div class="card-header">
                   <div class="settings-menu">
                     <a href="settings-profile.php">Profile</a>
-                    <a href="settings-application.php">Application</a>
-                    <a href="settings-security.php">Security</a>
                     <a href="settings-activity.html">Activity</a>
-                    <a href="settings-privacy.php">Privacy</a>
-                    <a href="settings-payment-method.php">Payment Method</a>
-                    <a href="settings-api.php">API</a>
                   </div>
                 </div>
                 <div class="card-body">
@@ -227,7 +222,7 @@
                       </div>
 
                       <div class="card">
-                        <div class="card-header px-0">
+                        <!--<div class="card-header px-0">
                           <h4 class="card-title">Web Sessions</h4>
 
                           <small
@@ -359,7 +354,7 @@
                           </table>
                         </div>
                       </div>
-
+-->
                       <div class="card">
                         <div class="card-header px-0">
                           <h4 class="card-title">Account Activity</h4>
@@ -372,7 +367,7 @@
                               <tr>
                                 <th>Action</th>
                                 <th>IP Address</th>
-                                <th>Location</th>
+                                <th>Date</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -397,7 +392,7 @@
                                       echo '<tr>
                                 <td>'.$row["type"].'</td>
                                 <td>157.119.239.254</td>
-                                <td>Bangladesh</td>
+                                <td>'.$row['date'].'</td>
                               </tr>';
                                   }
                               } else {

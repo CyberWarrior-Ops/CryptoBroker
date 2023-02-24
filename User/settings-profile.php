@@ -245,7 +245,7 @@ if (isset($_POST['update_button'])) {
             </li>
             <li>
               <a
-                href=".../Wallet/Cyptos.php"
+                href="../Wallet/Cyptos.php"
                 data-toggle="tooltip"
                 data-placement="right"
                 title="Trade"
@@ -291,12 +291,7 @@ if (isset($_POST['update_button'])) {
                 <div class="card-header">
                   <div class="settings-menu">
                     <a href="settings-profile.html">Profile</a>
-                    <a href="settings-application.php">Application</a>
-                    <a href="settings-security.php">Security</a>
                     <a href="settings-activity.php">Activity</a>
-                    <a href="settings-privacy.php">Privacy</a>
-                    <a href="settings-payment-method.php">Payment Method</a>
-                    <a href="settings-api.php">API</a>
                   </div>
                 </div>
                 <div class="card-body">

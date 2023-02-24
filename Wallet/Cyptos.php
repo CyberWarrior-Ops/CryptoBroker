@@ -141,7 +141,7 @@
                 </li>
                 <li>
                     <a
-                        href="settings-profile.html"
+                        href="../User/settings-profile.php"
                         data-toggle="tooltip"
                         data-placement="right"
                         title="Settings"
