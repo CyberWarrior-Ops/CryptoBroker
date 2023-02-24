@@ -2,20 +2,6 @@
 
 CryptoBroker is a vulnerable website based on web technologies created by CyberWarrior.com with the intention of being used within its academy, being a simulation platform for practice and development of cyber attack testing capabilities (Pentesting) for commercial and internal use within the organization, making this website possess certain vulnerabilities on a voluntary basis.
 
-## TODO
-
-- [ ] Finish database relations. ![80%](https://progress-bar.dev/80)
-- [ ] Add documentation. ![50%](https://progress-bar.dev/50)
-- [ ] DataBase Logic. ![100%](https://progress-bar.dev/100)
-- [ ] Finish routes. ![50%](https://progress-bar.dev/50)
-- [ ] Start the Front-end. ![10%](https://progress-bar.dev/10)
-    - [ ] HomePage. ![100%](https://progress-bar.dev/100)
-
-    - [ ] LoginPage. ![100%](https://progress-bar.dev/100)
-    - [ ] RegisterPage. ![100%](https://progress-bar.dev/100)
-    - [ ] DashBoardPage. ![10%](https://progress-bar.dev/10)
-    - [ ] Buy Criptos Logic ![80%](https://progress-bar.dev/80)
-    - [ ] Sell Criptos Logic ![60%](https://progress-bar.dev/60)
 
 ## Project dependencies
 
