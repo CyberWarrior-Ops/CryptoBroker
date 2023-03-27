@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Legal</title>
+    <title>FAQ</title>
     <!-- Favicon icon -->
     <link
       rel="icon"
@@ -28,7 +28,7 @@
               <div class="navigation">
                 <nav class="navbar navbar-expand-lg navbar-light">
                   <div class="brand-logo">
-                    <a href="index.html">
+                    <a href="../index.php">
                       <img
                               src="../images/logo.png"
                               alt=""
@@ -59,7 +59,7 @@
                                     <a class="nav-link" href="./index.php">Home</a>
                                 </li> -->
                       <li class="nav-item">
-                        <a class="nav-link" href="../details/price.html">Price</a>
+                        <a class="nav-link" href="price.html">Price</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a
@@ -69,14 +69,17 @@
                         >Company
                         </a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="../team.php">Team</a>
+                          <a class="dropdown-item" href="about.php"
+                          >About us</a
+                          >
+                          <a class="dropdown-item" href="team.php">Team</a>
                           <a class="dropdown-item" href="blogg.html">Blog</a>
-                          <a class="dropdown-item" href="../career.php"
+                          <a class="dropdown-item" href="career.php"
                           >Career</a
                           >
                         </div>
                       </li>
-                      <li class="nav-item dropdown text-primary">
+                      <li class="nav-item dropdown ">
                         <a
                                 class="nav-link dropdown-toggle text-primary"
                                 href="#"
@@ -84,16 +87,16 @@
                         >Support
                         </a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="../contact.php"
+                          <a class="dropdown-item" href="contact.php"
                           >Contact us</a
                           >
-                          <a class="dropdown-item" href="../helpdesk.php"
+                          <a class="dropdown-item" href="helpdesk.php"
                           >Help Desk</a
                           >
-                          <a class="dropdown-item text-primary" href="privacy-policy.php"
+                          <a class="dropdown-item" href="legal/privacy-policy.php"
                           >Privacy</a
                           >
-                          <a class="dropdown-item" href="../faq.php">FAQ</a>
+                          <a class="dropdown-item text-primary" href="faq.php">FAQ</a>
                         </div>
                       </li>
                     </ul>
@@ -108,116 +111,178 @@
           </div>
         </div>
       </div>
-        <br>
-        <br>
+
       <div class="terms_condition">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-9">
               <div class="terms_condition-content">
                 <div class="terms_condition-text">
-                  <h3>Your privacy is important to us:</h3>
-                  <p>Therefore, we guarantee that:</p>
+                  <h3>Frequently Asked Questions</h3>
+                  <p>
+                    CriptoBroker is an instant cryptocurrency exchange that allows you
+                    to exchange crypto fast and buy it with a bank card. The
+                    service provides the best crypto-to-crypto rates and
+                    supports over 140 cryptocurrencies available for exchange
+                  </p>
+                </div>
+
+                <div class="terms_condition-text">
+                  <h3>How does CriptoBroker work?</h3>
+                  <p>
+                    CB’s trading algorithm is integrated into the largest
+                    cryptocurrency exchange platforms, including Binance,
+                    Poloniex, Bittrex, etc. In the span of milliseconds, CB
+                    makes bids and asks on the platforms, then selects and
+                    suggests the best available rate and displays the estimated
+                    rate on our site. The rates remain approximate until the
+                    transaction is actually made on the blockchain, which is why
+                    the exchange rate at the time of a transaction may differ
+                    slightly from the estimated rate that you see when you begin
+                    a transaction. To learn more about the process, see this
+                    <a href="#">article</a>
+                  </p>
+                </div>
+
+                <div class="terms_condition-text">
+                  <h3>Why should I trust you?</h3>
+                  <p>
+                    CriptoBroker is one of the most prominent instant cryptocurrency
+                    exchanges that has gained the trust of more than 2M users
+                    from all over the world. The service provides safe and fast
+                    transactions without revealing users identities. We provide
+                    the best possible rates by comparing a wide range of
+                    reliable trading platforms and work with a list of 140+
+                    cryptocurrencies that is constantly increasing.
+                  </p>
+                  <ul>
+                    <li>
+                      <i class="bi bi-circle-fill"></i>
+                      <p>No deposit storage.</p>
+                    </li>
+                    <li>
+                      <i class="bi bi-circle-fill"></i>
+                      <p>Instant exchange.</p>
+                    </li>
+                    <li>
+                      <i class="bi bi-circle-fill"></i>
+                      <p>
+                        Each account is protected with 2-factor authentication
+                        and an HTTPS protocol.
+                      </p>
+                    </li>
+                    <li>
+                      <i class="bi bi-circle-fill"></i>
+                      <p>More than 2 million satisfied users.</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="terms_condition-text">
+                  <h3>Does CriptoBroker fix rates?</h3>
+                  <p>
+                    CB mobile app does! Mobile app users will no longer be
+                    affected by the risks associated with crypto market
+                    fluctuations. Soon, the fixed-rate exchanges will also be
+                    implemented on the web version. To lock the current exchange
+                    rate, the user needs to click on the lock icon, which will
+                    result in them getting the exact same amount of crypto as is
+                    displayed on the screen. The rate is fixed for 15 minutes,
+                    which should be more than enough to carry out the exchange.
+                  </p>
+                  <p>
+                    Alternatively, CB offers our lowest fee of 0.25% for all
+                    crypto-to-crypto exchanges made at a floating rate.
+                  </p>
+                </div>
+
+                <div class="terms_condition-text">
+                  <h3>No warranties :</h3>
+                  <p>
+                    Elaenia is provided “as is” without any representations or
+                    warranties. Elaenia.com makes no representations or
+                    warranties in relation to this website or the information
+                    and materials provided on this website.
+                  </p>
+                  <p>Elaenia.com does not warrant that:</p>
+
                   <ul>
                     <li>
                       <i class="bi bi-circle-fill"></i>
                       <p>
-                        We do not rent or sell your personal information to
-                        anyone.
+                        The website will be constantly available, or available
+                        at all moving forward.
                       </p>
                     </li>
                     <li>
                       <i class="bi bi-circle-fill"></i>
                       <p>
-                        Any personal information you provide will be secured by
-                        us.
-                      </p>
-                    </li>
-                    <li>
-                      <i class="bi bi-circle-fill"></i>
-                      <p>
-                        You will be able to erase all the data we have stored on
-                        you at any given time. To request data termination,
-                        please contact our customer support.
+                        The information on this website is complete, true, or
+                        non-misleading.
                       </p>
                     </li>
                   </ul>
                 </div>
 
                 <div class="terms_condition-text">
-                  <h3>Third-party services:</h3>
+                  <h3>Privacy :</h3>
                   <p>
-                    We use third-party services in order to operate our website.
-                    Please note that these services may contain links to
-                    third-party apps, websites or services that are not operated
-                    by us. We make no representation or warranties with regard
-                    to and are not responsible for the content, functionality,
-                    legality, security, accuracy, or other aspects of such
-                    third-party apps, websites or services. Note that, when
-                    accessing and/or using these third-party services, their own
-                    privacy policy may apply.
+                    For details about our privacy policy, please refer to the
+                    privacy policy section.
                   </p>
                 </div>
 
                 <div class="terms_condition-text">
-                  <h3>Google Analytics:</h3>
+                  <h3>Unenforceable provisions :</h3>
                   <p>
-                    This website uses Google Analytics, a web analytics service
-                    provided by Google, Inc. (“Google”). Google Analytics uses
-                    “cookies”, which are text files placed on your computer, to
-                    help the website analyze how users use the site. The
-                    information generated by the cookie about your use of the
-                    website will be transmitted to and stored by Google on
-                    servers in the United States . In case IP-anonymisation is
-                    activated on this website, your IP address will be truncated
-                    within the area of Member States of the European Union or
-                    other parties to the Agreement on the European Economic
-                    Area. Only in exceptional cases the whole IP address will be
-                    first transferred to a Google server in the USA and
-                    truncated there. The IP-anonymisation is active on this
-                    website. Google will use this information on behalf of the
-                    operator of this website for the purpose of evaluating your
-                    use of the website, compiling reports on website activity
-                    for website operators and providing them other services
-                    relating to website activity and internet usage. The
-                    IP-address, that your Browser conveys within the scope of
-                    Google Analytics, will not be associated with any other data
-                    held by Google. You may refuse the use of cookies by
-                    selecting the appropriate settings on your browser, however
-                    please note that if you do this you may not be able to use
-                    the full functionality of our website platform. You can also
-                    opt-out from being tracked by Google Analytics with effect
-                    for the future by downloading and installing Google
-                    Analytics Opt-out Browser Addon for your current web
-                    browser: https://tools.google.com/dlpage/gaoptout?hl=en.
+                    If any provision of this website disclaimer is, or is found
+                    to be, unenforceable under applicable law, that will not
+                    affect the enforceability of the other provisions of this
+                    website disclaimer.
                   </p>
                 </div>
 
                 <div class="terms_condition-text">
-                  <h3>Information we collect:</h3>
-                  <p>Information we collect:</p>
+                  <h3>Links :</h3>
+                  <p>
+                    Responsibility for the content of external links (to web
+                    pages of third parties) lies solely with the operators of
+                    the linked pages.
+                  </p>
+                </div>
+
+                <div class="terms_condition-text">
+                  <h3>Modifications:</h3>
+                  <p>
+                    Elaenia.com may revise these terms of use for its website at
+                    any time without notice. By using this web site you are
+                    agreeing to be bound by the then current version of these
+                    terms of service.
+                  </p>
+                </div>
+
+                <div class="terms_condition-text">
+                  <h3>Breaches of these terms and conditions:</h3>
                   <ul>
                     <li>
                       <i class="bi bi-circle-fill"></i>
-                      <p>Google ID (to identify you in our database)</p>
+                      <p>
+                        Elaenia.com reserves the rights under these terms and
+                        conditions to take action if you breach these terms and
+                        conditions in any way.
+                      </p>
                     </li>
                     <li>
                       <i class="bi bi-circle-fill"></i>
-                      <p>Google First & Last name</p>
-                    </li>
-                    <li>
-                      <i class="bi bi-circle-fill"></i>
-                      <p>Google Email</p>
-                    </li>
-                    <li>
-                      <i class="bi bi-circle-fill"></i>
-                      <p>Google avatar image</p>
+                      <p>
+                        Elaenia.com may take such action as seems appropriate to
+                        deal with the breach, including suspending your access
+                        to the website, suspending your earnings made trough
+                        Elaenia.com,prohibiting you from accessing the website,
+                        or bringing court proceedings against you.
+                      </p>
                     </li>
                   </ul>
-                  <p>
-                    We do not collect passwords or any other sensitive
-                    information.
-                  </p>
                 </div>
               </div>
             </div>
@@ -241,10 +306,10 @@
               <div class="bottom-widget">
                 <h4 class="widget-title">Company</h4>
                 <ul>
-                  <li ><a href="../about.php" class="yellowText">About</a></li>
-                  <li class="yellowText"><a href="../career.php" class="yellowText">Career</a></li>
+                  <li ><a href="about.php" class="yellowText">About</a></li>
+                  <li class="yellowText"><a href="career.php" class="yellowText">Career</a></li>
                   <li class="yellowText"><a href="#" class="yellowText">Affiliate</a></li>
-                  <li class="yellowText"><a href="../team.php" class="yellowText">Our Team</a></li>
+                  <li class="yellowText"><a href="team.php" class="yellowText">Our Team</a></li>
                 </ul>
               </div>
             </div>
@@ -252,10 +317,10 @@
               <div class="bottom-widget">
                 <h4 class="widget-title">Support</h4>
                 <ul>
-                  <li class="yellowText"><a href="../contact.php" class="yellowText">Contact us</a></li>
-                  <li class="yellowText"><a href="../faq.php" class="yellowText">FAQ</a></li>
+                  <li class="yellowText"><a href="contact.php" class="yellowText">Contact us</a></li>
+                  <li class="yellowText"><a href="faq.html"class="yellowText">FAQ</a></li>
                   <li class="yellowText"><a href="blogg.html" class="yellowText">Blog</a></li>
-                  <li class="yellowText"><a href="../helpdesk.php" class="yellowText">Helpdesk</a></li>
+                  <li class="yellowText"><a href="helpdesk.php" class="yellowText">Helpdesk</a></li>
                 </ul>
               </div>
             </div>
@@ -328,6 +393,7 @@
     <script src="../js/scripts.js"></script>
   </body>
 </html>
+
 <style>
   .btn-primary {
     background-color: #c2b42c !important;

@@ -10,11 +10,11 @@
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./images/favicon.png"
+      href="../images/favicon.png"
     />
     <!-- Custom Stylesheet -->
 
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body class="@@dashboard">
@@ -30,11 +30,11 @@
                   <div class="brand-logo">
                     <a href="index.html">
                       <img
-                              src="./images/logo.png"
+                              src="../images/logo.png"
                               alt=""
                               class="logo-primary"
                       />
-                      <img src="./images/logow.png" alt="" class="logo-white" />
+                      <img src="../images/logow.png" alt="" class="logo-white" />
                     </a>
                   </div>
                   <button
@@ -59,7 +59,7 @@
                                     <a class="nav-link" href="./index.php">Home</a>
                                 </li> -->
                       <li class="nav-item">
-                        <a class="nav-link" href="details/price.html">Price</a>
+                        <a class="nav-link" href="price.html">Price</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a
@@ -103,7 +103,7 @@
                   </div>
 
                   <div class="signin-btn ">
-                    <a class="btn btn-outline-dark px-4" href="login/signin.php">Sign in</a>
+                    <a class="btn btn-outline-dark px-4" href="../login/signin.php">Sign in</a>
                   </div>
                 </nav>
               </div>
@@ -137,7 +137,7 @@
             <div class="col-lg-6">
               <div class="ceo-content">
                 <img
-                  src="./images/testimonial/2.jpg"
+                  src="../images/testimonial/2.jpg"
                   alt=""
                   class="img-fluid rounded me-4"
                 />
@@ -178,19 +178,19 @@
           <div class="row pb-5">
             <div class="col-4">
               <img
-                src="./images/team/1.jpg"
+                src="../images/team/1.jpg"
                 class="img-fluid rounded shadow-md"
                 alt="..."
               />
             </div>
             <div class="col-3">
               <img
-                src="./images/team/2.jpg"
+                src="../images/team/2.jpg"
                 class="img-fluid rounded shadow-md mb-4"
                 alt="..."
               />
               <img
-                src="./images/team/3.jpg"
+                src="../images/team/3.jpg"
                 class="img-fluid rounded shadow-md"
                 alt="..."
               />
@@ -199,21 +199,21 @@
               <div class="row mb-4">
                 <div class="col-5">
                   <img
-                    src="./images/team/4.jpg"
+                    src="../images/team/4.jpg"
                     class="img-fluid rounded shadow-md mb-4"
                     alt="..."
                   />
                 </div>
                 <div class="col-7">
                   <img
-                    src="./images/team/5.jpg"
+                    src="../images/team/5.jpg"
                     class="img-fluid rounded shadow-md mb-4"
                     alt="..."
                   />
                 </div>
                 <div class="col-12">
                   <img
-                    src="./images/team/6.jpg"
+                    src="../images/team/6.jpg"
                     class="img-fluid rounded shadow-md"
                     alt="..."
                   />
@@ -235,7 +235,7 @@
                     <a href="#"
                       ><img
                         class="img-fluid"
-                        src="./images/brand/1.webp"
+                        src="../images/brand/1.webp"
                         alt=""
                     /></a>
                   </div>
@@ -245,7 +245,7 @@
                     <a href="#"
                       ><img
                         class="img-fluid"
-                        src="./images/brand/2.webp"
+                        src="../images/brand/2.webp"
                         alt=""
                     /></a>
                   </div>
@@ -255,7 +255,7 @@
                     <a href="#"
                       ><img
                         class="img-fluid"
-                        src="./images/brand/3.webp"
+                        src="../images/brand/3.webp"
                         alt=""
                     /></a>
                   </div>
@@ -265,7 +265,7 @@
                     <a href="#"
                       ><img
                         class="img-fluid"
-                        src="./images/brand/4.webp"
+                        src="../images/brand/4.webp"
                         alt=""
                     /></a>
                   </div>
@@ -275,7 +275,7 @@
                     <a href="#"
                       ><img
                         class="img-fluid"
-                        src="./images/brand/5.webp"
+                        src="../images/brand/5.webp"
                         alt=""
                     /></a>
                   </div>
@@ -285,7 +285,7 @@
                     <a href="#"
                       ><img
                         class="img-fluid"
-                        src="./images/brand/5.webp"
+                        src="../images/brand/5.webp"
                         alt=""
                     /></a>
                   </div>
@@ -315,7 +315,7 @@
           <div class="row">
             <div class="col-xl-4">
               <div class="bottom-logo">
-                <img class="pb-3" src="./images/logow.png" alt="" />
+                <img class="pb-3" src="../images/logow.png" alt="" />
 
                 <p style="color: white">
                   Your Crypto Wallet in one place.
@@ -407,10 +407,10 @@
       </div>
     </div>
 
-    <script src="./vendor/jquery/jquery.min.js"></script>
-    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="./js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>
 

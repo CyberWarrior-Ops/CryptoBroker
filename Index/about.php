@@ -10,11 +10,11 @@
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./images/favicon.png"
+      href="../images/favicon.png"
     />
     <!-- Custom Stylesheet -->
 
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <div id="main-wrapper">
@@ -25,13 +25,13 @@
                       <div class="navigation">
                           <nav class="navbar navbar-expand-lg navbar-light">
                               <div class="brand-logo">
-                                  <a href="index.php">
+                                  <a href="../index.php">
                                       <img
-                                              src="./images/logo.png"
+                                              src="../images/logo.png"
                                               alt=""
                                               class="logo-primary"
                                       />
-                                      <img src="./images/logow.png" alt="" class="logo-white" />
+                                      <img src="../images/logow.png" alt="" class="logo-white" />
                                   </a>
                               </div>
                               <button
@@ -56,7 +56,7 @@
                                                     <a class="nav-link" href="./index.php">Home</a>
                                                 </li> -->
                                       <li class="nav-item">
-                                          <a class="nav-link" href="details/price.html">Price</a>
+                                          <a class="nav-link" href="price.html">Price</a>
                                       </li>
                                       <li class="nav-item dropdown">
                                           <a
@@ -98,7 +98,7 @@
                               </div>
 
                               <div class="signin-btn ">
-                                  <a class="btn btn-outline-dark px-4" href="login/signin.php">Sign in</a>
+                                  <a class="btn btn-outline-dark px-4" href="../login/signin.php">Sign in</a>
                               </div>
                           </nav>
                       </div>
@@ -125,7 +125,7 @@
             </div>
             <div class="col-lg-6">
               <div class="service-img">
-                <img src="images/btchold.png" width="500" height="auto" alt="" class="img-fluid" />
+                <img src="../images/btchold.png" width="500" height="auto" alt="" class="img-fluid" />
               </div>
             </div>
           </div>
@@ -194,7 +194,7 @@
             </div>
             <div class="col-lg-6">
               <div class="service-img">
-                <img src="images/work.png" width="700" alt="" class="img-fluid" />
+                <img src="../images/work.png" width="700" alt="" class="img-fluid" />
               </div>
             </div>
           </div>
@@ -206,7 +206,7 @@
               <div class="row">
                   <div class="col-xl-4">
                       <div class="bottom-logo">
-                          <img class="pb-3" src="./images/logow.png" alt="" />
+                          <img class="pb-3" src="../images/logow.png" alt="" />
 
                           <p style="color: white">
                               Your Crypto Wallet in one place.
@@ -298,10 +298,10 @@
       </div>
   </div>
 
-    <script src="./vendor/jquery/jquery.min.js"></script>
-    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="./js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>
 

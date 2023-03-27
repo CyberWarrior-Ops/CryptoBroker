@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Tendex</title>
+    <title>CriptoBroker</title>
     <!-- Favicon icon -->
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./images/favicon.png"
+      href="../images/favicon.png"
     />
     <!-- Custom Stylesheet -->
 
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body class="@@dashboard">
@@ -30,11 +30,11 @@
                   <div class="brand-logo">
                     <a href="index.html">
                       <img
-                              src="./images/logo.png"
+                              src="../images/logo.png"
                               alt=""
                               class="logo-primary"
                       />
-                      <img src="./images/logow.png" alt="" class="logo-white" />
+                      <img src="../images/logow.png" alt="" class="logo-white" />
                     </a>
                   </div>
                   <button
@@ -51,7 +51,7 @@
                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
                       <li class="nav-item">
-                        <a class="nav-link " href="#">Home</a>
+                        <a class="nav-link" href="#">Home</a>
                       </li>
 
                       </li>
@@ -59,11 +59,11 @@
                                     <a class="nav-link" href="./index.php">Home</a>
                                 </li> -->
                       <li class="nav-item">
-                        <a class="nav-link" href="details/price.html">Price</a>
+                        <a class="nav-link" href="price.html">Price</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a
-                                class="nav-link dropdown-toggle text-primary"
+                                class="nav-link dropdown-toggle"
                                 href="#"
                                 data-toggle="dropdown"
                         >Company
@@ -73,14 +73,15 @@
                           >About us</a
                           >
                           <a class="dropdown-item" href="team.php">Team</a>
-                          <a class="dropdown-item text-primary" href="career.php"
+                          <a class="dropdown-item" href="blogg.html">Blog</a>
+                          <a class="dropdown-item" href="career.php"
                           >Career</a
                           >
                         </div>
                       </li>
                       <li class="nav-item dropdown">
                         <a
-                                class="nav-link dropdown-toggle"
+                                class="nav-link dropdown-toggle text-primary"
                                 href="#"
                                 data-toggle="dropdown"
                         >Support
@@ -89,7 +90,7 @@
                           <a class="dropdown-item" href="contact.php"
                           >Contact us</a
                           >
-                          <a class="dropdown-item" href="helpdesk.php"
+                          <a class="dropdown-item text-primary" href="helpdesk.php"
                           >Help Desk</a
                           >
                           <a class="dropdown-item" href="legal/privacy-policy.php"
@@ -102,7 +103,7 @@
                   </div>
 
                   <div class="signin-btn ">
-                    <a class="btn btn-outline-dark px-4" href="login/signin.php">Sign in</a>
+                    <a class="btn btn-outline-dark px-4" href="../login/signin.php">Sign in</a>
                   </div>
                 </nav>
               </div>
@@ -111,93 +112,150 @@
         </div>
       </div>
 
-      <div class="choose-team section-padding">
+      <div class="helpdesk-search section-padding bg-light">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-xl-6">
+            <div class="col-xl-7">
+              <div class="helpdesk-search-content">
+                <h2 class="mb-5">How can we help you today?</h2>
+                <div class="helpdesk-form">
+                  <form action="#">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search here"
+                    />
+                    <button type="submit" class="btn btn-primary">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="help-category section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+              <div class="help-cat">
+                <span class="bi bi-camera-video"></span>
+                <h4>Video Guide</h4>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+              <div class="help-cat">
+                <span class="bi bi-clipboard-check"></span>
+                <h4>FAQ</h4>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+              <div class="help-cat">
+                <span class="bi bi-braces"></span>
+                <h4>API for developers</h4>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-auto">
+              <a href="#" class="sub-cat">
+                <h5>Troubleshooting</h5>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a href="#" class="sub-cat">
+                <h5>Partnership</h5>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a href="#" class="sub-cat">
+                <h5>Getting started</h5>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a href="#" class="sub-cat">
+                <h5>Wallets</h5>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a href="#" class="sub-cat">
+                <h5>Healthy Tips</h5>
+              </a>
+            </div>
+            <div class="col-auto">
+              <a href="#" class="sub-cat">
+                <h5>Crypto-definitions</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="troubleshooting section-padding">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-8">
               <div class="section-title text-center">
-                <h2>Choose your team</h2>
+                <h2>Troubleshooting</h2>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-xl-12 col-xxl-12">
-              <div id="accordion-faq" class="accordion">
-                <div class="card">
-                  <div class="card-header">
-                    <h4
-                      class="mb-0 collapsed c-pointer"
-                      data-toggle="collapse"
-                      data-target="#collapseOne1"
-                    >
-                      <i class="fa"></i>Business Development & Sales
-                    </h4>
+            <div class="col-xl-12">
+              <div class="troubleshooting-content">
+                <div class="row">
+                  <div class="col-xl-4 col-lg-4 col-md-4">
+                    <h4>My Transaction</h4>
+                    <ul>
+                      <li><a href="#">My transaction is stuck</a></li>
+                      <li><a href="#">The amount is too low</a></li>
+                      <li><a href="#">Sorry, payment was not received</a></li>
+                      <li><a href="#">Still didn't get my refund</a></li>
+                    </ul>
                   </div>
-                  <div
-                    id="collapseOne1"
-                    class="collapse show"
-                    data-parent="#accordion-faq"
-                  >
-                    <div class="card-body">
-                      <div>
-                        <h5 class="text-primary">
-                          Business Development Director
-                        </h5>
-                        <span>San Francisco, CA</span>
-                      </div>
-                    </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4">
+                    <h4>My Wallet</h4>
+                    <ul>
+                      <li>
+                        <a href="#"
+                          >My wallet address is recognized as invalid</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#">What does ‘Not yet redeemed?’ mean</a>
+                      </li>
+                      <li>
+                        <a href="#">I sent my ABC coins to a non-ABC wallet</a>
+                      </li>
+                      <li><a href="#">ETH contract addresses</a></li>
+                    </ul>
                   </div>
-                </div>
-                <div class="card">
-                  <div class="card-header">
-                    <h4
-                      class="mb-0 collapsed c-pointer"
-                      data-toggle="collapse"
-                      data-target="#collapseTwo2"
-                    >
-                      <i class="fa"></i>Engineering - Frontend
-                    </h4>
-                  </div>
-                  <div
-                    id="collapseTwo2"
-                    class="collapse"
-                    data-parent="#accordion-faq"
-                  >
-                    <div class="card-body">
-                      <div>
-                        <h5 class="text-primary">
-                          Frontend Engineer, Identity
-                        </h5>
-                        <span>San Francisco, CA</span>
-                      </div>
-                    </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4">
+                    <h4>Other</h4>
+                    <ul>
+                      <li><a href="#">Customer service doesn't reply</a></li>
+                      <li><a href="#">The amount is too low</a></li>
+                      <li><a href="#">Can't log in</a></li>
+                      <li><a href="#">Can’t enable / disable 2-FA</a></li>
+                    </ul>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-header">
-                    <h4
-                      class="mb-0 collapsed c-pointer"
-                      data-toggle="collapse"
-                      data-target="#collapseThree3"
-                    >
-                      <i class="fa"></i>Marketing & Communications
-                    </h4>
-                  </div>
-                  <div
-                    id="collapseThree3"
-                    class="collapse"
-                    data-parent="#accordion-faq"
-                  >
-                    <div class="card-body">
-                      <div>
-                        <h5 class="text-primary">
-                          Head of Product and Performance Marketing
-                        </h5>
-                        <span>San Francisco, CA</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticket-box section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="ticket-box-content">
+                <h3>Can't find what you're looking for?</h3>
+                <p>Let us help you!</p>
+                <a href="#" class="btn btn-dark">Submit Ticket</a>
               </div>
             </div>
           </div>
@@ -209,7 +267,7 @@
           <div class="row">
             <div class="col-xl-4">
               <div class="bottom-logo">
-                <img class="pb-3" src="./images/logow.png" alt="" />
+                <img class="pb-3" src="../images/logow.png" alt="" />
 
                 <p style="color: white">
                   Your Crypto Wallet in one place.
@@ -221,7 +279,7 @@
                 <h4 class="widget-title">Company</h4>
                 <ul>
                   <li ><a href="about.php" class="yellowText">About</a></li>
-                  <li class="yellowText"><a href="career.html" class="yellowText">Career</a></li>
+                  <li class="yellowText"><a href="career.php" class="yellowText">Career</a></li>
                   <li class="yellowText"><a href="#" class="yellowText">Affiliate</a></li>
                   <li class="yellowText"><a href="team.php" class="yellowText">Our Team</a></li>
                 </ul>
@@ -234,7 +292,7 @@
                   <li class="yellowText"><a href="contact.php" class="yellowText">Contact us</a></li>
                   <li class="yellowText"><a href="faq.php" class="yellowText">FAQ</a></li>
                   <li class="yellowText"><a href="blogg.html" class="yellowText">Blog</a></li>
-                  <li class="yellowText"><a href="helpdesk.php" class="yellowText">Helpdesk</a></li>
+                  <li class="yellowText"><a href="helpdesk.html"class="yellowText">Helpdesk</a></li>
                 </ul>
               </div>
             </div>
@@ -301,10 +359,10 @@
       </div>
     </div>
 
-    <script src="./vendor/jquery/jquery.min.js"></script>
-    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="./js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>
 

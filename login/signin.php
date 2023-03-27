@@ -89,7 +89,7 @@
               <div class="privacy-link">
 
                 <br />
-                <a href="../legal/privacy-policy.php" class="text-white">Privacy Policy and Terms of Use</a>
+                <a href="../Index/legal/privacy-policy.php" class="text-white">Privacy Policy and Terms of Use</a>
               </div>
             </div>
           </div>

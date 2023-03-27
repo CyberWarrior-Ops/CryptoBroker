@@ -130,7 +130,7 @@ mysqli_close($connection);
                                     <a class="nav-link" href="./index.php">Home</a>
                                 </li> -->
                       <li class="nav-item">
-                        <a class="nav-link" href="details/price.html">Price</a>
+                        <a class="nav-link" href="Index/price.html">Price</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a
@@ -140,9 +140,9 @@ mysqli_close($connection);
                           >Company
                         </a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="team.php">Team</a>
+                          <a class="dropdown-item" href="Index/team.php">Team</a>
                           <a class="dropdown-item" href="blogg.html">Blog</a>
-                          <a class="dropdown-item" href="career.php"
+                          <a class="dropdown-item" href="Index/career.php"
                             >Career</a
                           >
                         </div>
@@ -155,16 +155,16 @@ mysqli_close($connection);
                           >Support
                         </a>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="contact.php"
+                          <a class="dropdown-item" href="Index/contact.php"
                             >Contact us</a
                           >
-                          <a class="dropdown-item" href="helpdesk.php"
+                          <a class="dropdown-item" href="Index/helpdesk.php"
                             >Help Desk</a
                           >
-                          <a class="dropdown-item" href="legal/privacy-policy.php"
+                          <a class="dropdown-item" href="Index/legal/privacy-policy.php"
                             >Privacy</a
                           >
-                          <a class="dropdown-item" href="faq.php">FAQ</a>
+                          <a class="dropdown-item" href="Index/faq.php">FAQ</a>
                         </div>
                       </li>
                     </ul>
@@ -706,10 +706,10 @@ mysqli_close($connection);
               <div class="bottom-widget">
                 <h4 class="widget-title">Company</h4>
                 <ul>
-                  <li ><a href="about.php" class="yellowText">About</a></li>
-                  <li class="yellowText"><a href="career.php" class="yellowText">Career</a></li>
+                  <li ><a href="Index/about.php" class="yellowText">About</a></li>
+                  <li class="yellowText"><a href="Index/career.php" class="yellowText">Career</a></li>
                   <li class="yellowText"><a href="#" class="yellowText">Affiliate</a></li>
-                  <li class="yellowText"><a href="team.php" class="yellowText">Our Team</a></li>
+                  <li class="yellowText"><a href="Index/team.php" class="yellowText">Our Team</a></li>
                 </ul>
               </div>
             </div>
@@ -717,10 +717,10 @@ mysqli_close($connection);
               <div class="bottom-widget">
                 <h4 class="widget-title">Support</h4>
                 <ul>
-                  <li class="yellowText"><a href="contact.php" class="yellowText">Contact us</a></li>
-                  <li class="yellowText"><a href="faq.php" class="yellowText">FAQ</a></li>
+                  <li class="yellowText"><a href="Index/contact.php" class="yellowText">Contact us</a></li>
+                  <li class="yellowText"><a href="Index/faq.php" class="yellowText">FAQ</a></li>
                   <li class="yellowText"><a href="blogg.html" class="yellowText">Blog</a></li>
-                  <li class="yellowText"><a href="helpdesk.php" class="yellowText">Helpdesk</a></li>
+                  <li class="yellowText"><a href="Index/helpdesk.php" class="yellowText">Helpdesk</a></li>
                 </ul>
               </div>
             </div>
