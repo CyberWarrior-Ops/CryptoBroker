@@ -1,4 +1,12 @@
 <?php
+
+$command = escapeshellcmd('PythonScript/Api_Connect.py');
+
+$output = shell_exec($command);
+
+echo $output;
+
+
 // set conn
 $connection = mysqli_connect("localhost", "root", "", "Cripto");
 
